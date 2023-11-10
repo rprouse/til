@@ -11,10 +11,15 @@ Public™](https://dev.to/jbranchaud/how-i-built-a-learning-machine-45k9)
 
 ## Categories
 
+- [NeoVim](#neovim)
 - [WSL](#wsl)
 - [WinGet](#winget)
 
 ---
+
+## NeoVim
+
+- [Install NeoVim](./neovim/install-neovim.md)
 
 ## WSL
 
