@@ -12,10 +12,19 @@ Public™](https://dev.to/jbranchaud/how-i-built-a-learning-machine-45k9)
 ## Categories
 
 - [WSL](#wsl)
+- [WinGet](#winget)
 
 ---
 
 ## WSL
+
+- [Install WSL2](./wsl/install-wsl.md)
+- [Install Desktop and RDP Access in a WSL Distro](./wsl/install-rdp.md)
+- [Set the Default User back from Root after Importing WSL Distro](./wsl/set-default-user.md)
+
+## WinGet
+
+- [Install WinGet](./winget/install-winget.md)
 
 ## About
 
@@ -24,9 +33,9 @@ I shamelessly stole this idea and format from
 
 ## Other TIL Collections
 
-* [Today I Learned by Hashrocket](https://til.hashrocket.com)
-* [jwworth/til](https://github.com/jwworth/til)
-* [thoughtbot/til](https://github.com/thoughtbot/til)
+- [Today I Learned by Hashrocket](https://til.hashrocket.com)
+- [jwworth/til](https://github.com/jwworth/til)
+- [thoughtbot/til](https://github.com/thoughtbot/til)
 
 ## License
 
