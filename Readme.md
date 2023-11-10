@@ -1,0 +1,37 @@
+# TIL
+
+> Today I Learned
+
+A collection of concise write-ups on small things I learn day to day across a
+variety of languages and technologies. These are things that don't really
+warrant a full blog post. These are things I've picked up by [Learning In
+Public™](https://dev.to/jbranchaud/how-i-built-a-learning-machine-45k9)
+
+---
+
+## Categories
+
+- [WSL](#wsl)
+
+---
+
+## WSL
+
+## About
+
+I shamelessly stole this idea and format from
+[jbranchaud/til](https://github.com/jbranchaud/til).
+
+## Other TIL Collections
+
+* [Today I Learned by Hashrocket](https://til.hashrocket.com)
+* [jwworth/til](https://github.com/jwworth/til)
+* [thoughtbot/til](https://github.com/thoughtbot/til)
+
+## License
+
+&copy; 2023 Rob Prouse
+
+This work is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. See `LICENSE` for details.
+
+<img src="./img/by-nc-sa.png" alt="CC BY-NC-SA" width="140" />
