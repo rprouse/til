@@ -31,6 +31,10 @@ A collection of short write-ups on small things I learn day to day across a vari
 
 - [Upgrade Oh My Posh](./powershell/upgrade-oh-my-posh.md)
 
+### TypeScript
+
+- [Setup a Yarn Project with Typescript in VS Code](./typescript/setup-yarn-with-ts.md)
+
 ### WSL
 
 - [Install WSL2](./wsl/install-wsl.md)
