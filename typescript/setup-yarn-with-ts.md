@@ -1,4 +1,4 @@
-# Setup a Yarn Project with Typescript in VS Code
+# Setup a Yarn Project with TypeScript in VS Code
 
 ```sh
 # Install Yarn globally

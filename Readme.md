@@ -33,7 +33,7 @@ A collection of short write-ups on small things I learn day to day across a vari
 
 ### TypeScript
 
-- [Setup a Yarn Project with Typescript in VS Code](./typescript/setup-yarn-with-ts.md)
+- [Setup a Yarn Project with TypeScript in VS Code](./typescript/setup-yarn-with-ts.md)
 
 ### WSL
 
