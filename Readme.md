@@ -17,6 +17,12 @@ A collection of short write-ups on small things I learn day to day across a vari
 - [Running a Container](./docker/running-container.md)
 - [Attaching to a running container](./docker/attach-container.md)
 
+### Git
+
+- [Revert the Last Commit](./git/revert-last-commit.md)
+- [View commits on all branches for a user](./git/view-user-commits.md)
+- [Format the oneline output](./git/format-output.md)
+
 ### NeoVim
 
 - [Install NeoVim](./neovim/install-neovim.md)
