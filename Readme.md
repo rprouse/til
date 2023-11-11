@@ -6,10 +6,16 @@ A collection of short write-ups on small things I learn day to day across a vari
 
 ## 🗒️ Categories
 
+- [Docker](#docker)
 - [NeoVim](#neovim)
 - [PowerShell](#powershell)
 - [WSL](#wsl)
 - [WinGet](#winget)
+
+### Docker
+
+- [Running a Container](./docker/running-container.md)
+- [Attaching to a running container](./docker/attach-container.md)
 
 ### NeoVim
 
