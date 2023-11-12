@@ -29,7 +29,7 @@ And write that prg file to the C64 disk you created:
 c1541 -attach hello.d64 -write hello.prg
 ```
 
-And now you've got a C64 ready to be loaded onto your C64 using an SD2IEC, or you can test it in VICE using:
+And now you've got a C64 ready to be loaded onto your C64 using an [SD2IEC](SD2IEC.md), or you can test it in VICE using:
 
 ```sh
 x64 hello.d64
