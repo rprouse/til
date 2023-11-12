@@ -26,7 +26,7 @@ A collection of short write-ups on small things I learn day to day across a vari
 
 ### Electronics
 
-
+- [SMD Resistor & Capacitor Sizes](./electronics/smd-resistors.md)
 
 ### NeoVim
 
