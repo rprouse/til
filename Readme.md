@@ -10,6 +10,9 @@ A collection of short write-ups on small things I learn day to day across a vari
 - [Electronics](#electronics)
 - [NeoVim](#neovim)
 - [PowerShell](#powershell)
+- [Retro Computers](#retro-computers)
+  - [Commodore 64](#commodore-64)
+  - [CP/M](#cpm)
 - [WSL](#wsl)
 - [WinGet](#winget)
 
@@ -35,6 +38,16 @@ A collection of short write-ups on small things I learn day to day across a vari
 ### PowerShell
 
 - [Upgrade Oh My Posh](./powershell/upgrade-oh-my-posh.md)
+
+### Retro Computers
+
+#### Commodore 64
+
+- [Writing BASIC Files on the Computer and Transferring to the Commodore 64](./retro/c64/tokenize-basic.md)
+
+#### CP/M
+
+- [ZDE16](./retro/cpm/zde16.md)
 
 ### TypeScript
 
