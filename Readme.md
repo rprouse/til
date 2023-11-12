@@ -7,6 +7,7 @@ A collection of short write-ups on small things I learn day to day across a vari
 ## 🗒️ Categories
 
 - [Docker](#docker)
+- [Electronics](#electronics)
 - [NeoVim](#neovim)
 - [PowerShell](#powershell)
 - [WSL](#wsl)
@@ -22,6 +23,10 @@ A collection of short write-ups on small things I learn day to day across a vari
 - [Revert the Last Commit](./git/revert-last-commit.md)
 - [View commits on all branches for a user](./git/view-user-commits.md)
 - [Format the oneline output](./git/format-output.md)
+
+### Electronics
+
+
 
 ### NeoVim
 
