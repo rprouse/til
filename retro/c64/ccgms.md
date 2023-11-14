@@ -18,3 +18,5 @@ Latest source code is at [mist64/ccgmsterm](https://github.com/mist64/ccgmsterm)
 
 Note: This BBS doesn't work well on the C64. I just used it as an example as
 I usually connect to it from my RC2014 system.
+
+You can increase the baud rate to `4800` or `9600` by switching the Modem Type to `UP9600 / EZ232`. I found `9600` had a few errors so use `4800`.
