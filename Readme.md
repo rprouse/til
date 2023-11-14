@@ -45,6 +45,7 @@ A collection of short write-ups on small things I learn day to day across a vari
 
 - [JiffyDOS](./retro/c64/jiffy-dos.md)
 - [SD2IEC](./retro/c64/SD2IEC.md)
+- [Supermon+64 V1.2](./retro/c64/supermod.md)
 - [Writing BASIC Files on the Computer and Transferring to the Commodore 64](./retro/c64/tokenize-basic.md)
 
 #### CP/M
