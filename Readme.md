@@ -16,6 +16,10 @@ A collection of short write-ups on small things I learn day to day across a vari
 - [WSL](#wsl)
 - [WinGet](#winget)
 
+### CSharp
+
+- [Calculate Git commits by Author on all branches](./csharp/git-commits.md)
+
 ### Docker
 
 - [Running a Container](./docker/running-container.md)
@@ -25,6 +29,7 @@ A collection of short write-ups on small things I learn day to day across a vari
 
 - [Revert the Last Commit](./git/revert-last-commit.md)
 - [View commits on all branches for a user](./git/view-user-commits.md)
+- [Calculate Git commits by Author on all branches in C#](./csharp/git-commits.md)
 - [Format the oneline output](./git/format-output.md)
 
 ### Electronics
