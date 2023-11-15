@@ -43,8 +43,8 @@ foreach (var branch in repo.Branches)
 }
 
 // Print the stats
-foreach (var developer in commits.Keys)
+foreach (var dev in commits.Keys)
 {
-    Console.WriteLine($"{developer}, {commits[developer]}, {defaultCommits[developer]}");
+    Console.WriteLine($"{dev}, {commits[dev]}, {defaultCommits[dev]}");
 }
 ```
