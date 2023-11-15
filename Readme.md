@@ -6,6 +6,7 @@ A collection of short write-ups on small things I learn day to day across a vari
 
 ## 🗒️ Categories
 
+- [C#/CSharp](#ccsharp)
 - [Docker](#docker)
 - [Electronics](#electronics)
 - [NeoVim](#neovim)
@@ -16,7 +17,7 @@ A collection of short write-ups on small things I learn day to day across a vari
 - [WSL](#wsl)
 - [WinGet](#winget)
 
-### CSharp
+### C#/CSharp
 
 - [Calculate Git commits by Author on all branches](./csharp/git-commits.md)
 
