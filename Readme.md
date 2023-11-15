@@ -2,7 +2,9 @@
 
 ![Today I Learned](./img/til-banner.png)
 
-A collection of short write-ups on small things I learn day to day across a variety of languages and technologies. These are things that don't really warrant a full blog post. These are things I've picked up by [Learning In Public™](https://dev.to/jbranchaud/how-i-built-a-learning-machine-45k9)
+A collection of short write-ups on small things I learn day to day across a variety of languages and technologies. These are things that don't really warrant a full blog post. These are things I've picked up by [Learning In Public™](https://dev.to/jbranchaud/how-i-built-a-learning-machine-45k9).
+
+I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/) and if I ever get back to it, posts on more modern technologies and programming are at [Alteridem.Net](https://alteridem.net/).
 
 ## 🗒️ Categories
 
