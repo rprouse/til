@@ -1,6 +1,6 @@
-# Calculate Git commits by Author on all branches
+# Count Git merge commits by Author
 
-This code will loop through every branch in a local Git repository and count the number of commits by each author over the past year. It also counts the number of commits to the default branch.
+This code counts the number of merge commits on the default branch. It only works with GitHub repositories.
 
 The code uses `LibGit2Sharp`,
 
@@ -45,6 +45,6 @@ foreach (var branch in repo.Branches)
 // Print the stats
 foreach (var dev in commits.Keys)
 {
-    Console.WriteLine($"{dev}, {commits[dev]}, {defaultCommits[dev]}");
+    Console.WriteLine($"{dev}, {commits[dev]}");
 }
 ```

@@ -21,7 +21,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 
 ### C#/CSharp
 
-- [Calculate Git commits by Author on all branches](./csharp/git-commits.md)
+- [Count Git merge commits by Author](./csharp/git-commits.md)
 
 ### Docker
 
