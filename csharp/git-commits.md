@@ -23,23 +23,22 @@ Dictionary<string, int> defaultCommits = new();
 
 using Repository repo = new(repoPath);
 
-foreach (var branch in repo.Branches)
+var branch = repo.Branches.FirstOrDefault(b => b.FriendlyName == defaultBranch);
+if (branch is null)
 {
-    foreach (var commit in branch.Commits.Where(c => c.Author.When >= oneYearAgo))
+    Console.WriteLine($"{defaultBranch} not found");
+    return;
+}
+
+// When the Author is a user and the Committer is GitHub, it is a merge commit from a PR
+foreach (var commit in branch.Commits.Where(c => c.Author.When >= oneYearAgo && c.Committer.Name == "GitHub"))
+{
+    string author = commit.Author.Name;
+    if (!commits.ContainsKey(author))
     {
-        string author = commit.Author.Name;
-        string branchName = branch.FriendlyName;
-
-        if (!commits.ContainsKey(author))
-        {
-            commits[author] = 0;
-            defaultCommits[author] = 0;
-        }
-
-        commits[author]++;
-        if (branch.FriendlyName == defaultBranch)
-            defaultCommits[author]++;
+        commits[author] = 0;
     }
+    commits[author]++;
 }
 
 // Print the stats
