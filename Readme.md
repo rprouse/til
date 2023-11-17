@@ -11,11 +11,14 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [C#/CSharp](#ccsharp)
 - [Docker](#docker)
 - [Electronics](#electronics)
+- [Git](#git)
 - [NeoVim](#neovim)
 - [PowerShell](#powershell)
 - [Retro Computers](#retro-computers)
   - [Commodore 64](#commodore-64)
   - [CP/M](#cpm)
+- [SQL](#sql)
+- [TypeScript](#typescript)
 - [WSL](#wsl)
 - [WinGet](#winget)
 
@@ -28,16 +31,16 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [Running a Container](./docker/running-container.md)
 - [Attaching to a running container](./docker/attach-container.md)
 
+### Electronics
+
+- [SMD Resistor & Capacitor Sizes](./electronics/smd-resistors.md)
+
 ### Git
 
 - [Revert the Last Commit](./git/revert-last-commit.md)
 - [View commits on all branches for a user](./git/view-user-commits.md)
 - [Calculate Git commits by Author on all branches in C#](./csharp/git-commits.md)
 - [Format the oneline output](./git/format-output.md)
-
-### Electronics
-
-- [SMD Resistor & Capacitor Sizes](./electronics/smd-resistors.md)
 
 ### NeoVim
 
@@ -60,6 +63,10 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 #### CP/M
 
 - [ZDE16](./retro/cpm/zde16.md)
+
+### SQL
+
+- [Counting in a SQL Select based on the Column Value](./sql/where-in-select.md)
 
 ### TypeScript
 
