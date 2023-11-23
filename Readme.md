@@ -12,6 +12,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [Docker](#docker)
 - [Electronics](#electronics)
 - [Git](#git)
+- [Linux](#linux)
 - [NeoVim](#neovim)
 - [PowerShell](#powershell)
 - [Retro Computers](#retro-computers)
@@ -41,6 +42,10 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [View commits on all branches for a user](./git/view-user-commits.md)
 - [Calculate Git commits by Author on all branches in C#](./csharp/git-commits.md)
 - [Format the oneline output](./git/format-output.md)
+
+### Linux
+
+- [Switch to Virtual Consoles (TTYs)](./linux/switch-tty.md)
 
 ### NeoVim
 
