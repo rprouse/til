@@ -31,6 +31,7 @@ This repo has a folder icon set in `desktop.ini`. To enable it, you must set the
 
 - [Count Git merge commits by Author](./csharp/git-commits.md)
 - [List repositories in a GitHub Organization](./csharp/github-repos.md)
+- [Read a CSV File](./csharp/read-csv.md)
 
 ### Docker
 

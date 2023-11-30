@@ -52,5 +52,4 @@ public class Repository
     [JsonPropertyName("html_url")]
     public string HtmlUrl { get; set; }
 }
-
 ```
