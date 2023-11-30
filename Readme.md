@@ -6,6 +6,10 @@ A collection of short write-ups on small things I learn day to day across a vari
 
 I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/) and if I ever get back to it, posts on more modern technologies and programming are at [Alteridem.Net](https://alteridem.net/).
 
+## Folder Icon
+
+This repo has a folder icon set in `desktop.ini`. To enable it, you must set the system file attribute with `attrib +s til`.
+
 ## 🗒️ Categories
 
 - [C#/CSharp](#ccsharp)
@@ -26,6 +30,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 ### C#/CSharp
 
 - [Count Git merge commits by Author](./csharp/git-commits.md)
+- [List repositories in a GitHub Organization](./csharp/github-repos.md)
 
 ### Docker
 
