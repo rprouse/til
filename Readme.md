@@ -12,6 +12,7 @@ This repo has a folder icon set in `desktop.ini`. To enable it, you must set the
 
 ## 🗒️ Categories
 
+- [Azure](#azure)
 - [C#/CSharp](#ccsharp)
 - [Docker](#docker)
 - [Electronics](#electronics)
@@ -26,6 +27,10 @@ This repo has a folder icon set in `desktop.ini`. To enable it, you must set the
 - [TypeScript](#typescript)
 - [WSL](#wsl)
 - [WinGet](#winget)
+
+### Azure
+
+- [Local Azure Storage Development](./azure/azurite.md)
 
 ### C#/CSharp
 
