@@ -28,6 +28,10 @@ This repo has a folder icon set in `desktop.ini`. To enable it, you must set the
 - [WSL](#wsl)
 - [WinGet](#winget)
 
+### Android Development
+
+- [ADB Error Logs](./android/adb_error_logs.md)
+
 ### Azure
 
 - [Local Azure Storage Development](./azure/azurite.md)
