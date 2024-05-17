@@ -6,6 +6,10 @@ Learning to hack!
 
 ![Wax on, wax off](https://media4.giphy.com/media/J2xkAW1E8kvyE/giphy-downsized-medium.gif)
 
+## Optional Refreshers
+
+-
+
 ## Intro to Cybersecurity
 
 - [Building a Web Server](./webserver/Readme.md)
