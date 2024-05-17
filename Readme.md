@@ -28,31 +28,31 @@ This repo has a folder icon set in `desktop.ini`. To enable it, you must set the
 - [WSL](#wsl)
 - [WinGet](#winget)
 
-### Android Development
+### 📱 Android Development
 
 - [ADB Error Logs](./android/adb_error_logs.md)
 
-### Azure
+### ☁️ Azure
 
 - [Local Azure Storage Development](./azure/azurite.md)
 
-### C#/CSharp
+### 🔫 C#/CSharp
 
 - [Count Git merge commits by Author](./csharp/git-commits.md)
 - [List repositories in a GitHub Organization](./csharp/github-repos.md)
 - [List repositories in an Azure DevOps Project](./csharp/ado-repos.md)
 - [Read a CSV File](./csharp/read-csv.md)
 
-### Docker
+### 📦 Docker
 
 - [Running a Container](./docker/running-container.md)
 - [Attaching to a running container](./docker/attach-container.md)
 
-### Electronics
+### 📻 Electronics
 
 - [SMD Resistor & Capacitor Sizes](./electronics/smd-resistors.md)
 
-### Git
+### 🌿 Git
 
 - [Revert the Last Commit](./git/revert-last-commit.md)
 - [View commits on all branches for a user](./git/view-user-commits.md)
@@ -60,19 +60,19 @@ This repo has a folder icon set in `desktop.ini`. To enable it, you must set the
 - [Format the oneline output](./git/format-output.md)
 - [Git Shallow Clone](./git/shallow-clone.md)
 
-### Linux
+### 🐧 Linux
 
 - [Switch to Virtual Consoles (TTYs)](./linux/switch-tty.md)
 
-### NeoVim
+### 📄 NeoVim
 
 - [Install NeoVim](./neovim/install-neovim.md)
 
-### PowerShell
+### 🐚 PowerShell
 
 - [Upgrade Oh My Posh](./powershell/upgrade-oh-my-posh.md)
 
-### Retro Computers
+### 🕹️ Retro Computers
 
 #### Commodore 64
 
@@ -86,21 +86,21 @@ This repo has a folder icon set in `desktop.ini`. To enable it, you must set the
 
 - [ZDE16](./retro/cpm/zde16.md)
 
-### SQL
+### 📊 SQL
 
 - [Counting in a SQL Select based on the Column Value](./sql/where-in-select.md)
 
-### TypeScript
+### 🗒️ TypeScript
 
 - [Setup a Yarn Project with TypeScript in VS Code](./typescript/setup-yarn-with-ts.md)
 
-### WSL
+### 🐧 WSL
 
 - [Install WSL2](./wsl/install-wsl.md)
 - [Install Desktop and RDP Access in a WSL Distro](./wsl/install-rdp.md)
 - [Set the Default User back from Root after Importing WSL Distro](./wsl/set-default-user.md)
 
-### WinGet
+### 🪟 WinGet
 
 - [Install WinGet](./winget/install-winget.md)
 
