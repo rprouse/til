@@ -8,8 +8,10 @@ Learning to hack!
 
 ## Optional Refreshers
 
--
+- [Program Misuse](./progarm_misuse/Readme.md)
+- [Assembly Crash Course](./assembly/Readme.md)
 
 ## Intro to Cybersecurity
 
+- [Talking Web](./talking_web/Readme.md)
 - [Building a Web Server](./webserver/Readme.md)

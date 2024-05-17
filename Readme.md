@@ -108,6 +108,10 @@ This repo has a folder icon set in `desktop.ini`. To enable it, you must set the
 
 - [Install WinGet](./winget/install-winget.md)
 
+### 🛠️ x86/x64 Assembly
+
+- [x86/x64 Assembly Notes](./pwn.college/assembly/Readme.md) from [pwn.college](./pwn.college/Readme.md) course
+
 ## ❓About
 
 I shamelessly stole this idea and format from
@@ -121,7 +125,7 @@ I shamelessly stole this idea and format from
 
 ## ⚖️ License
 
-&copy; 2023 Rob Prouse
+&copy; 2024 Rob Prouse
 
 This work is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. See [LICENSE](.\LICENSE) for details.
 
