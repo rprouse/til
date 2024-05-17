@@ -67,6 +67,7 @@ This repo has a folder icon set in `desktop.ini`. To enable it, you must set the
 ### 🐧 Linux
 
 - [Switch to Virtual Consoles (TTYs)](./linux/switch-tty.md)
+- [Curl notes](./pwn.college/talking_web/Readme.md#curl)
 
 ### 📄 NeoVim
 
@@ -75,6 +76,11 @@ This repo has a folder icon set in `desktop.ini`. To enable it, you must set the
 ### 🐚 PowerShell
 
 - [Upgrade Oh My Posh](./powershell/upgrade-oh-my-posh.md)
+
+### 🐍 Python
+
+- [HTTP GET and POST](./pwn.college/talking_web/Readme.md#python)
+- [Running external processes](./pwn.college/progarm_misuse/Readme.md#python)
 
 ### 🕹️ Retro Computers
 

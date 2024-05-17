@@ -8,6 +8,35 @@ And, when the intricacies of the `python requests` library beckon, dive into its
 
 ## Curl
 
+```txt
+-L follow redirects
+-s Silent mode
+-S Show errors when -s is used
+-H Include header "Host: spark"
+```
+
+### URL Encode data
+
+```bash
+curl \
+    --data-urlencode "paramName=value" \
+    --data-urlencode "secondParam=value" \
+    http://example.com
+```
+
+### POST form encoded data
+
+```bash
+curl -d "a=56b1102aea2c3356181231827d2eaee2" -X POST http://localhost
+```
+
+### POST JSON data
+
+```sh
+curl -d '{"key1":"value1", "key2":"value2"}' -H "Content-Type: application/json" -X POST http://localhost:3000/data
+```
+
+
 ## Netcat
 
 ### HTTP POST with NetCat

@@ -8,7 +8,9 @@ pwn.college [Program Misuse](https://pwn.college/fundamentals/program-misuse/) d
 env -i hello
 ```
 
-## Run external process in Python
+## Python
+
+### Run external process in Python
 
 ```python
 import subprocess
@@ -16,7 +18,7 @@ import subprocess
 subprocess.run(['/challenge/embryoio_level16'])
 ```
 
-## Run external process in Python and redirect file to stdin
+### Run external process in Python and redirect file to stdin
 
 ```python
 import sys
@@ -27,7 +29,7 @@ with open('/tmp/qymjzu', 'r') as infile:
         stdin=infile, stdout=sys.stdout, stderr=sys.stderr)
 ```
 
-## Run external process in Python and redirect output to stdout
+### Run external process in Python and redirect output to stdout
 
 ```python
 import sys
