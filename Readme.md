@@ -60,6 +60,10 @@ This repo has a folder icon set in `desktop.ini`. To enable it, you must set the
 - [Format the oneline output](./git/format-output.md)
 - [Git Shallow Clone](./git/shallow-clone.md)
 
+### 👨‍💻 Hacking / Cybersecurity
+
+- [pwn.college](./pwn.college/Readme.md) notes and code from working through the course.
+
 ### 🐧 Linux
 
 - [Switch to Virtual Consoles (TTYs)](./linux/switch-tty.md)
