@@ -71,11 +71,19 @@ process_request:
 
     # Parse out the requested filename from the request
     lea rdi, [rip+buff]      # Load the address of the request string buffer
-    call find_space          # Call the find_space function
-    mov rsi, rdi             # Save the address of the filename
-    call find_space          # Call the find_space function again to find the end of the filename
+    call find_space          # Call the find_space function to jump past the first space
+    mov rsi, rdi             # Save the address of the filename to RSI
+    call find_space          # Call the find_space function again to find the end of the filename and add a null byte
 
-    # Open the requested file
+    # Check if the request is a POST or GET
+    lea rdi, [rip+buff]      # Load the address of the request string buffer
+    mov al, [rdi]            # Load the first character of the request
+    cmp al, 'P'              # Compare the first character with 'P'
+    je post                  # If it is 'P', it is a POST request
+
+# GET Request - Open the file and send it back to the client
+get:
+    # Open the requested file for reading
     # int open(const char *pathname, int flags, mode_t mode)
     mov rdi, rsi                # Filename
     mov rsi, 0                  # O_RDONLY
@@ -112,6 +120,72 @@ process_request:
     mov rax, 0x01
     syscall
 
+    jmp end_request
+
+# POST Request - Save the file to disk
+post:
+    # Find the Content-Length header in the request
+    # Start by scanning forwards to each newline. This code is not robust and
+    # assumes the Content-Length header is present in the request and the last header
+    lea rdi, [rip+buff]      # Load the address of the request string buffer
+
+scan_headers:
+    call find_newline        # Call the find_newline function to jump past the first newline
+    mov al, [rdi]            # Load the current character into al
+    cmp al, 'C'              # Compare the character
+    jne scan_headers         # If it is not 'C', continue scanning headers
+    inc rdi                  # Move to the next character (o)
+    inc rdi                  # Move to the next character (n)
+    inc rdi                  # Move to the next character (t) for Content-Length or (n) for Connection
+    mov al, [rdi]            # Load the current character into al
+    cmp al, 't'              # Compare the character
+    jne scan_headers         # If it is not 'o', continue scanning headers
+
+    # We assume that a header starting with Cont is Content-Length
+    # Find the colon and space after the header
+    xor rax, rax        // Clear the file length
+    call find_space          # Call the find_space function to jump past the first space
+
+read_content_length:
+    mul [file_len], 10       # Multiply the file length by 10
+    mov al, [rdi]            # Load the next character into al
+    cmp al, '\r'             # Compare the character with carriage return ('\r')
+    je done_headers          # If it is a carriage return, we are done with the headers
+
+    sub al, '0'              # Convert the character to a number
+    add [file_len], al       # Add the number to the file length
+
+done_headers:
+    # Open the requested file for writing
+    mov rdi, rsi                # Filename
+    mov rsi, 0x201              # O_CREAT | O_WRONLY | O_TRUNC
+    mov rdx, 0x1B6              # S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH
+    mov rax, 0x02
+    syscall
+    mov [filefd], rax
+
+    # Write the response header to the socket
+    # ssize_t write(int fd, const void *buf, size_t count);
+    mov rdi, [reqfd]
+    lea rsi, response
+    mov rdx, response_end-response-1
+    mov rax, 0x01
+    syscall
+
+    # Write the file data from the request to the file
+    mov rdi, [filefd]
+    lea rsi, rbp
+    mov rdx, [file_len]
+    mov rax, 0x01
+    syscall
+
+    # Close the file
+    mov rdi, [filefd]
+    mov rax, 0x03
+    syscall
+
+# Close the request file descriptor and exit the child process
+end_request:
     # Close the socket
     # int close(int fd)
     mov rdi, [reqfd]
@@ -123,6 +197,24 @@ process_request:
     mov rdi, 0
     mov rax, 0x3C
     syscall
+
+# Function to jump one past the next \n in a string
+# Entry:
+#   rdi: Pointer to the string
+# Exit:
+#   rdi is incremented to the next character after the space
+find_newline:
+    mov al, [rdi]                # Load the current character into al
+    cmp al, '\n'                 # Compare the character with newline ('\n')
+    je done                      # If it is a newline finish up
+    cmp al, 0                    # Compare the character with null byte ('\0')
+    je done                      # If it is null byte, we're done (no newline found)
+    inc rdi                      # Move to the next character
+    jmp find_newline             # Repeat the loop
+
+done_newline:
+    inc rdi                      # Move to the next character
+    ret                          # Return to the caller
 
 # Function to replace the first space in a string with a null byte
 # Entry:
@@ -141,8 +233,9 @@ find_space:
 
 replace_space:
     mov byte ptr [rdi], 0        # Replace the space with a null byte ('\0')
-    inc rdi                      # Move to the next character
+
 done:
+    inc rdi                      # Move to the next character
     ret                          # Return to the caller
 
 .section .data

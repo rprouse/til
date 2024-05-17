@@ -9,6 +9,49 @@ Develop the skills needed to build a web server from scratch, starting with a si
 - [Makefile](./Makefile)
 - [server.s](./server.s)
 
+## Notes
+
+### Level 9
+
+The GET request is in the form,
+
+```txt
+GET /tmp/tmplfy_on1j HTTP/1.1\r\nHost: localhost\r\nUser-Agent: python-requests/2.31.0\r\nAccept-Encoding: gzip, deflate, zstd\r\nAccept: */*\r\nConnection: keep-alive\r\n\r\n
+```
+
+Normalized,
+
+```txt
+GET /tmp/tmplfy_on1j HTTP/1.1
+Host: localhost
+User-Agent: python-requests/2.31.0
+Accept-Encoding: gzip, deflate, zstd
+Accept: */*
+Connection: keep-alive
+```
+
+### Level 10
+
+The POST request is in the form
+
+```txt
+POST /tmp/tmp_lujmq8s HTTP/1.1\r\nHost: localhost\r\nUser-Agent: python-requests/2.31.0\r\nAccept-Encoding: gzip, deflate, zstd\r\nAccept: */*\r\nConnection: keep-alive\r\nContent-Length: 106\r\n\r\nluxCpwzQX11ZXl4ASUNdK8gPozVzNKZTnVVdeynQP6YiGHp1IZOIt5PggTzf8VqqDMc3xARQ19L9yCiasFYyQJykvOnczTiqVaMfpz3JHl
+```
+
+Normalized,
+
+```txt
+POST /tmp/tmp_lujmq8s HTTP/1.1
+Host: localhost
+User-Agent: python-requests/2.31.0
+Accept-Encoding: gzip, deflate, zstd
+Accept: */*
+Connection: keep-alive
+Content-Length: 106
+
+luxCpwzQX11ZXl4ASUNdK8gPozVzNKZTnVVdeynQP6YiGHp1IZOIt5PggTzf8VqqDMc3xARQ19L9yCiasFYyQJykvOnczTiqVaMfpz3JHl
+```
+
 ## Useful links
 
 - pwn.college [Building a Web Server](https://pwn.college/intro-to-cybersecurity/building-a-web-server/) module
