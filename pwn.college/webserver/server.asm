@@ -171,7 +171,7 @@ get:
 
     ; Read the file into a buffer
     read filefd, file_buff, file_buff_len
-    mov [file_len], rax      ; Save the return value, bytes read
+    push rax                 ; Save the file length
 
     ; Close the file
     close filefd
@@ -180,7 +180,8 @@ get:
     write reqfd, response, response_len
 
     ; Write the file buffer to the socket
-    write reqfd, file_buff, file_len
+    pop rax                  ; Load the file length
+    write reqfd, file_buff, rax
 
     ; Close the socket
     close reqfd
@@ -324,10 +325,6 @@ reqfd:
 ; The file descriptor for the requested file
 filefd:
     dq  0
-
-; The file length read
-file_len:
-    dw  0
 ; ==============================================================================
 section .bss
 
