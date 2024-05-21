@@ -20,6 +20,10 @@ The GET request is in the form,
 GET /tmp/tmplfy_on1j HTTP/1.1\r\nHost: localhost\r\nUser-Agent: python-requests/2.31.0\r\nAccept-Encoding: gzip, deflate, zstd\r\nAccept: */*\r\nConnection: keep-alive\r\n\r\n
 ```
 
+```sh
+curl http://localhost/etc/issue
+```
+
 Normalized,
 
 ```txt
@@ -37,6 +41,10 @@ The POST request is in the form
 
 ```txt
 POST /tmp/tmp_lujmq8s HTTP/1.1\r\nHost: localhost\r\nUser-Agent: python-requests/2.31.0\r\nAccept-Encoding: gzip, deflate, zstd\r\nAccept: */*\r\nConnection: keep-alive\r\nContent-Length: 106\r\n\r\nluxCpwzQX11ZXl4ASUNdK8gPozVzNKZTnVVdeynQP6YiGHp1IZOIt5PggTzf8VqqDMc3xARQ19L9yCiasFYyQJykvOnczTiqVaMfpz3JHl
+```
+
+```sh
+curl -d "luxCpwzQX11ZXl4ASUNdK8gPozVzNKZTnVVdeynQP6YiGHp1IZOIt5PggTzf8VqqDMc3xARQ19L9yCiasFYyQJykvOnczTiqVaMfpz3JHl" -X POST http://localhost/tmp/mypost
 ```
 
 Normalized,

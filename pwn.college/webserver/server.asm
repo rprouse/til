@@ -1,47 +1,138 @@
 bits 64
 
+; ==============================================================================
+; System call defines
+SYS_READ    equ 0x00
+SYS_WRITE   equ 0x01
+SYS_OPEN    equ 0x02
+SYS_CLOSE   equ 0x03
+SYS_SOCKET  equ 0x29
+SYS_ACCEPT  equ 0x2B
+SYS_BIND    equ 0x31
+SYS_LISTEN  equ 0x32
+SYS_FORK    equ 0x39
+SYS_EXIT    equ 0x3C
+
+; Other defines
+AF_INET     equ 2
+SOCK_STREAM equ 1
+IPPROTO_IP  equ 0
+
+O_RDONLY    equ 0
+O_WRONLY    equ 1
+O_CREAT     equ 0x40
+
+CR          equ 0xD
+LF          equ 0xA
+
+; ==============================================================================
+; System call macros
+; Return value: rax
+
+; ssize_t read(int fd, void *buf, size_t count)
+%macro read 3
+    mov rdi, [%1]
+    mov rsi, %2
+    mov rdx, %3
+    mov rax, SYS_READ
+    syscall
+%endmacro
+
+; ssize_t write(int fd, const void *buf, size_t count)
+%macro write 3
+    mov rdi, [%1]
+    mov rsi, %2
+    mov rdx, %3
+    mov rax, SYS_WRITE
+    syscall
+%endmacro
+
+; int open(const char *pathname, int flags, mode_t mode)
+%macro open 3
+    mov rdi, %1
+    mov rsi, %2
+    mov rdx, %3
+    mov rax, SYS_OPEN
+    syscall
+%endmacro
+
+; int close(int fd)
+%macro close 1
+    mov rdi, [%1]
+    mov rax, SYS_CLOSE
+    syscall
+%endmacro
+
+; int socket(int domain, int type, int protocol)
+%macro socket 3
+    mov rdi, %1
+    mov rsi, %2
+    mov rdx, %3
+    mov rax, SYS_SOCKET
+    syscall
+%endmacro
+
+; int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen)
+%macro accept 3
+    mov rdi, [%1]
+    mov rsi, %2
+    mov rdx, %3
+    mov rax, SYS_ACCEPT
+    syscall
+%endmacro
+
+; int bind(int sockfd, struct sockaddr *addr, socklen_t addrlen)
+%macro bind 3
+    mov rdi, [%1]
+    lea rsi, [rel %2]
+    mov rdx, %3
+    mov rax, SYS_BIND
+    syscall
+%endmacro
+
+; int listen(int sockfd, int backlog)
+%macro listen 2
+    mov rdi, [%1]
+    mov rsi, %2
+    mov rax, SYS_LISTEN
+    syscall
+%endmacro
+
+; int fork()
+%macro fork 0
+    mov rax, SYS_FORK
+    syscall
+%endmacro
+
+; void exit(int error_code)
+%macro exit 1
+    mov rdi, %1
+    mov rax, SYS_EXIT
+    syscall
+%endmacro
+
+; ==============================================================================
 section .text
 global _start
 _start:
 
     ; Open then network socket
-    ; int socket(int domain, int type, int protocol)
-    mov rdi, 2                  ; AF_INET
-    mov rsi, 1                  ; SOCK_STREAM
-    mov rdx, 0                  ; IPPROTO_IP
-    mov rax, 0x29
-    syscall
-    mov [sockfd], rax           ; Save the return value
+    socket AF_INET, SOCK_STREAM, IPPROTO_IP
+    mov [sockfd], rax
 
     ; Bind the socket to the address
-    ; int bind(int sockfd, struct sockaddr *addr, socklen_t addrlen)
-    mov rdi, [sockfd]           ; Return value from socket()
-    lea rsi, [rel sockaddr_in]
-    mov rdx, 16
-    mov rax, 0x31
-    syscall
+    bind sockfd, sockaddr_in, 16
 
     ; Listen on the socket
-    ; int listen(int sockfd, int backlog)
-    mov rdi, [sockfd]
-    mov rsi, 0
-    mov rax, 0x32
-    syscall
+    listen sockfd, 0
 
-accept:
+accept_loop:
     ; Accept a connection
-    ; int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen)
-    mov rdi, [sockfd]
-    mov rsi, 0
-    mov rdx, 0
-    mov rax, 0x2B
-    syscall
+    accept sockfd, 0, 0
     mov [reqfd], rax
 
     ; Fork a child process to handle the request
-    ; int fork()
-    mov rax, 0x39
-    syscall
+    fork
 
     ; If we are the child process, continue processing the request
     cmp rax, 0
@@ -49,25 +140,15 @@ accept:
 
     ; We are the parent process, loop back to accept the next connection
     ; Close the socket and go back to accept
-    mov rdi, [reqfd]
-    mov rax, 0x03
-    syscall
+    close reqfd
 
-    jmp accept
+    jmp accept_loop
 
 process_request:
     ; Close the socket in the child process
-    mov rdi, [sockfd]
-    mov rax, 0x03
-    syscall
+    close sockfd
 
-    ; Read the request
-    ; ssize_t read(int fd, void *buf, size_t count)
-    mov rdi, [reqfd]
-    mov rsi, buff
-    mov rdx, buff_len
-    mov rax, 0x00
-    syscall
+    read reqfd, buff, buff_len
 
     ; Parse out the requested filename from the request
     lea rdi, [rel buff]      ; Load the address of the request string buffer
@@ -81,47 +162,32 @@ process_request:
     cmp al, 'P'              ; Compare the first character with 'P'
     je post                  ; If it is 'P', it is a POST request
 
+; ==============================================================================
 ; GET Request - Open the file and send it back to the client
 get:
     ; Open the requested file for reading
-    ; int open(const char *pathname, int flags, mode_t mode)
-    mov rdi, rsi                ; Filename
-    mov rsi, 0                  ; O_RDONLY
-    mov rdx, 0                  ; No mode
-    mov rax, 0x02
-    syscall
+    open rsi, O_RDONLY, 0
     mov [filefd], rax
 
     ; Read the file into a buffer
-    mov rdi, [filefd]
-    mov rsi, file_buff
-    mov rdx, file_len
-    mov rax, 0x00
-    syscall
+    read filefd, file_buff, file_buff_len
     mov [file_len], rax      ; Save the return value, bytes read
 
     ; Close the file
-    mov rdi, [filefd]
-    mov rax, 0x03
-    syscall
+    close filefd
 
     ; Write the response header to the socket
-    ; ssize_t write(int fd, const void *buf, size_t count);
-    mov rdi, [reqfd]
-    mov rsi, response
-    mov rdx, response_len
-    mov rax, 0x01
-    syscall
+    write reqfd, response, response_len
 
     ; Write the file buffer to the socket
-    mov rdi, [reqfd]
-    mov rsi, file_buff
-    mov rdx, [file_len]
-    mov rax, 0x01
-    syscall
+    write reqfd, file_buff, file_len
+
+    ; Close the socket
+    close reqfd
 
     jmp end_request
 
+; ==============================================================================
 ; POST Request - Save the file to disk
 post:
     ; Find the Content-Length header in the request
@@ -146,72 +212,60 @@ scan_headers:
     xor rax, rax             ; Clear the file length
     call find_space          ; Call the find_space function to jump past the first space
 
-    mov eax, 0               ; AX will hold the file length until we are done
+    mov ax, 0                ; AX will hold the file length until we are done
+    mov bx, 0
 read_content_length:
-    imul eax, 10             ; Multiply the file length by 10
-    mov bx, [rdi]            ; Load the next character
-    cmp bx, '\r'             ; Compare the character with carriage return ('\r')
+    mov bl, [rdi]            ; Load the next character
+    cmp bl, CR               ; Compare the character with carriage return ('\r')
     je done_headers          ; If it is a carriage return, we are done with the headers
 
-    sub bx, '0'              ; Convert the character to a number
+    imul ax, 10              ; Multiply the file length by 10
+    sub bl, '0'              ; Convert the character to a number
     add ax, bx               ; Add the number to the file length
+    inc rdi
+
+    jmp read_content_length  ; Read the next digit
 
 done_headers:
-    mov [file_len], ax       ; Save the file length from read_content_length
+    push rax
+
+    inc rdi                  ; Skip the CR after the headers
+    inc rdi                  ; Skip the NL after the headers
+    inc rdi                  ; Skip the CR after the headers
+    inc rdi                  ; Skip the NL after the headers
+    mov rbp, rdi             ; Save the address of the file data to RBP
 
     ; Open the requested file for writing
-    mov rdi, rsi                ; Filename
-    mov rsi, 0x201              ; O_CREAT | O_WRONLY | O_TRUNC
-    mov rdx, 0x1B6              ; S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH
-    mov rax, 0x02
-    syscall
+    open rsi, O_CREAT | O_WRONLY, 0o0777
     mov [filefd], rax
 
-    ; Write the response header to the socket
-    ; ssize_t write(int fd, const void *buf, size_t count);
-    mov rdi, [reqfd]
-    mov rsi, response
-    mov rdx, response_len
-    mov rax, 0x01
-    syscall
-
     ; Write the file data from the request to the file
-    mov rdi, [filefd]
-    mov rsi, rbp
-    mov rdx, [file_len]
-    mov rax, 0x01
-    syscall
+    pop rax
+    write filefd, rbp, rax
 
     ; Close the file
-    mov rdi, [filefd]
-    mov rax, 0x03
-    syscall
+    close filefd
+
+    ; Write the response header to the socket
+    write reqfd, response, response_len
 
 ; Close the request file descriptor and exit the child process
 end_request:
-    ; Close the socket
-    ; int close(int fd)
-    mov rdi, [reqfd]
-    mov rax, 0x03
-    syscall
-
     ; Exit the program
-    ; void exit(int error_code)
-    mov rdi, 0
-    mov rax, 0x3C
-    syscall
+    exit 0
 
+; ==============================================================================
 ; Function to jump one past the next \n in a string
 ; Entry:
 ;   rdi: Pointer to the string
 ; Exit:
 ;   rdi is incremented to the next character after the space
 find_newline:
-    mov ax, [rdi]                ; Load the current character into al
-    cmp ax, '\n'                 ; Compare the character with newline ('\n')
-    je done                      ; If it is a newline finish up
-    cmp ax, 0                    ; Compare the character with null byte ('\0')
-    je done                      ; If it is null byte, we're done (no newline found)
+    mov al, [rdi]                ; Load the current character into al
+    cmp al, LF                   ; Compare the character with newline ('\n')
+    je done_newline              ; If it is a newline finish up
+    cmp al, 0                    ; Compare the character with null byte ('\0')
+    je done_newline              ; If it is null byte, we're done (no newline found)
     inc rdi                      ; Move to the next character
     jmp find_newline             ; Repeat the loop
 
@@ -241,23 +295,8 @@ done:
     inc rdi                      ; Move to the next character
     ret                          ; Return to the caller
 
+; ==============================================================================
 section .data
-
-; The socket returned from socket()
-sockfd:
-    dq  00
-
-; The file descriptor returned from accept()
-reqfd:
-    dq  00
-
-; The file descriptor for the requested file
-filefd:
-    dq  00
-
-; The file length read
-file_len:
-    dw  00
 
 ; The address structure passed to bind()
 sockaddr_in:
@@ -271,9 +310,25 @@ pad:
     dq  0
 
 response:
-    db 'HTTP/1.0 200 OK',0xD,0xA,0xD,0xA
+    db 'HTTP/1.0 200 OK',CR,LF,CR,LF
 response_len equ $-response
 
+; The socket returned from socket()
+sockfd:
+    dq  0
+
+; The file descriptor returned from accept()
+reqfd:
+    dq  0
+
+; The file descriptor for the requested file
+filefd:
+    dq  0
+
+; The file length read
+file_len:
+    dw  0
+; ==============================================================================
 section .bss
 
 ; Buffer for the read call
