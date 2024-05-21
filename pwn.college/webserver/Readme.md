@@ -7,7 +7,8 @@ Develop the skills needed to build a web server from scratch, starting with a si
 ## Code
 
 - [Makefile](./Makefile)
-- [server.s](./server.s)
+- [server.s](./server.s) GNU Assembler (GAS) version
+- [server.asm](./server.asm) NASM version
 
 ## Notes
 
