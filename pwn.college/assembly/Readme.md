@@ -37,12 +37,12 @@ pwn.college [Assembly Crash Course](https://pwn.college/fundamentals/assembly-cr
 
 ## Memory Sizes
 
-| Size | Bytes | Bits |
-| --- | --- | --- |
-| Quad Word | 8 Bytes | 64 bits |
-| Double Word | 4 bytes | 32 bits |
-| Word        | 2 bytes | 16 bits |
-| Byte        | 1 byte  | 8 bits |
+| Size | NASM | Bytes | Bits |
+| --- | --- | --- | --- |
+| Quad Word | dq | 8 Bytes | 64 bits |
+| Double Word | dd | 4 bytes | 32 bits |
+| Word        | dw | 2 bytes | 16 bits |
+| Byte        | db | 1 byte  | 8 bits |
 
 In x86_64, you can access each of these sizes when dereferencing an address, just like using
 bigger or smaller register accesses:
