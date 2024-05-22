@@ -1,7 +1,5 @@
 # Building a Web Server
 
-## Intro to Cybersecurity
-
 Develop the skills needed to build a web server from scratch, starting with a simple program and progressing to handling multiple HTTP GET and POST requests. The server is written in assembly using the [GNU Assembler](https://sourceware.org/binutils/docs/as/) using Intel Syntax.
 
 ## Code

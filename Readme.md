@@ -36,6 +36,10 @@ This repo has a folder icon set in `desktop.ini`. To enable it, you must set the
 
 - [Local Azure Storage Development](./azure/azurite.md)
 
+### 💻 C
+
+- [Open and listen on a network port](./pwn.college/network_intercepts/Readme.md#listen-to-a-port)
+
 ### 🔫 C#/CSharp
 
 - [Count Git merge commits by Author](./csharp/git-commits.md)
@@ -117,6 +121,7 @@ This repo has a folder icon set in `desktop.ini`. To enable it, you must set the
 ### 🛠️ x86/x64 Assembly
 
 - [x86/x64 Assembly Notes](./pwn.college/assembly/Readme.md) from [pwn.college](./pwn.college/Readme.md) course
+- [Simple HTTP server](pwn.college/webserver/server.asm)
 
 ## ❓About
 
