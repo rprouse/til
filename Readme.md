@@ -6,10 +6,6 @@ A collection of short write-ups on small things I learn day to day across a vari
 
 I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/) and if I ever get back to it, posts on more modern technologies and programming are at [Alteridem.Net](https://alteridem.net/).
 
-## Folder Icon
-
-This repo has a folder icon set in `desktop.ini`. To enable it, you must set the system file attribute with `attrib +s til`.
-
 ## 🗒️ Categories
 
 - [Azure](#azure)
@@ -140,4 +136,4 @@ I shamelessly stole this idea and format from
 
 This work is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. See [LICENSE](.\LICENSE) for details.
 
-<img src="./img/by-nc-sa.png" alt="CC BY-NC-SA" width="140" />
+![CC BY-NC-SA](./img/by-nc-sa.png)
