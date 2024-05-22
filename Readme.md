@@ -69,6 +69,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 
 - [Switch to Virtual Consoles (TTYs)](./linux/switch-tty.md)
 - [Curl notes](./pwn.college/talking_web/Readme.md#curl)
+- [Set IP address](./linux/ifconfig.md#set-the-ip-address-of-an-interface)
 
 ### 📄 NeoVim
 
