@@ -63,6 +63,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 ### 👨‍💻 Hacking / Cybersecurity
 
 - [pwn.college](./pwn.college/Readme.md) notes and code from working through the course.
+- [Packet Reassembly in Wireshark](./hacking/wireshark_stream.md)
 
 ### 🐧 Linux
 
