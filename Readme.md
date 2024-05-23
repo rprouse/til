@@ -102,7 +102,8 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 ## 🛠️ x86/x64 Assembly
 
 - [x86/x64 Assembly Notes](./pwn.college/assembly/Readme.md) from [pwn.college](./pwn.college/Readme.md) course
-- [Simple HTTP server](pwn.college/webserver/server.asm)
+- [BIOS Interrupts](./x86asm/bios_int.md)
+- [Simple HTTP server](./pwn.college/webserver/server.asm)
 
 ## ❓About
 
