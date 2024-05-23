@@ -6,57 +6,35 @@ A collection of short write-ups on small things I learn day to day across a vari
 
 I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/) and if I ever get back to it, posts on more modern technologies and programming are at [Alteridem.Net](https://alteridem.net/).
 
-## 🗒️ Categories
-
-- [Android Development](./Readme.md#android-development)
-- [Azure](./Readme.md#azure)
-- [C#/CSharp](./Readme.md#ccsharp)
-- [Docker](./Readme.md#docker)
-- [Electronics](./Readme.md#electronics)
-- [Git](./Readme.md#git)
-- [Hacking / Cybersecurity](./Readme.md#-hacking--cybersecurity)
-- [Linux](./Readme.md#linux)
-- [NeoVim](./Readme.md#neovim)
-- [PowerShell](./Readme.md#powershell)
-- [Python](./Readme.md#-python)
-- [Retro Computers](./Readme.md#retro-computers)
-  - [Commodore 64](./Readme.md#commodore-64)
-  - [CP/M](./Readme.md#cpm)
-- [SQL](./Readme.md#sql)
-- [TypeScript](./Readme.md#typescript)
-- [WSL](./Readme.md#wsl)
-- [WinGet](./Readme.md#winget)
-- [x86/x64 Assembly](./Readme.md#️-x86x64-assembly)
-
-### 📱 Android Development
+## 📱 Android Development
 
 - [ADB Error Logs](./android/adb_error_logs.md)
 
-### ☁️ Azure
+## ☁️ Azure
 
 - [Local Azure Storage Development](./azure/azurite.md)
 
-### 💻 C
+## 💻 C
 
 - [Open and listen on a network port](./pwn.college/network_intercepts/Readme.md#listen-to-a-port)
 
-### 🔫 C#/CSharp
+## 🔫 C#/CSharp
 
 - [Count Git merge commits by Author](./csharp/git-commits.md)
 - [List repositories in a GitHub Organization](./csharp/github-repos.md)
 - [List repositories in an Azure DevOps Project](./csharp/ado-repos.md)
 - [Read a CSV File](./csharp/read-csv.md)
 
-### 📦 Docker
+## 📦 Docker
 
 - [Running a Container](./docker/running-container.md)
 - [Attaching to a running container](./docker/attach-container.md)
 
-### 📻 Electronics
+## 📻 Electronics
 
 - [SMD Resistor & Capacitor Sizes](./electronics/smd-resistors.md)
 
-### 🌿 Git
+## 🌿 Git
 
 - [Revert the Last Commit](./git/revert-last-commit.md)
 - [View commits on all branches for a user](./git/view-user-commits.md)
@@ -64,34 +42,34 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [Format the oneline output](./git/format-output.md)
 - [Git Shallow Clone](./git/shallow-clone.md)
 
-### 👨‍💻 Hacking / Cybersecurity
+## 👨‍💻 Hacking / Cybersecurity
 
 - [pwn.college](./pwn.college/Readme.md) notes and code from working through the course.
 - [Packet Reassembly in Wireshark](./hacking/wireshark_stream.md)
 
-### 🐧 Linux
+## 🐧 Linux
 
 - [Man](./linux/man.md) notes
 - [Switch to Virtual Consoles (TTYs)](./linux/switch-tty.md)
 - [Curl notes](./pwn.college/talking_web/Readme.md#curl)
 - [Set IP address](./linux/ifconfig.md#set-the-ip-address-of-an-interface)
 
-### 📄 NeoVim
+## 📄 NeoVim
 
 - [Install NeoVim](./neovim/install-neovim.md)
 
-### 🐚 PowerShell
+## 🐚 PowerShell
 
 - [Upgrade Oh My Posh](./powershell/upgrade-oh-my-posh.md)
 
-### 🐍 Python
+## 🐍 Python
 
 - [HTTP GET and POST](./pwn.college/talking_web/Readme.md#python)
 - [Running external processes](./pwn.college/progarm_misuse/Readme.md#python)
 
-### 🕹️ Retro Computers
+## 🕹️ Retro Computers
 
-#### Commodore 64
+### Commodore 64
 
 - [CCGMS & WiModem](./retro/c64/ccgms.md)
 - [JiffyDOS](./retro/c64/jiffy-dos.md)
@@ -99,29 +77,29 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [Supermon+64 V1.2](./retro/c64/supermod.md)
 - [Writing BASIC Files on the Computer and Transferring to the Commodore 64](./retro/c64/tokenize-basic.md)
 
-#### CP/M
+### CP/M
 
 - [ZDE16](./retro/cpm/zde16.md)
 
-### 📊 SQL
+## 📊 SQL
 
 - [Counting in a SQL Select based on the Column Value](./sql/where-in-select.md)
 
-### 🗒️ TypeScript
+## 🗒️ TypeScript
 
 - [Setup a Yarn Project with TypeScript in VS Code](./typescript/setup-yarn-with-ts.md)
 
-### 🐧 WSL
+## 🐧 WSL
 
 - [Install WSL2](./wsl/install-wsl.md)
 - [Install Desktop and RDP Access in a WSL Distro](./wsl/install-rdp.md)
 - [Set the Default User back from Root after Importing WSL Distro](./wsl/set-default-user.md)
 
-### 🪟 WinGet
+## 🪟 WinGet
 
 - [Install WinGet](./winget/install-winget.md)
 
-### 🛠️ x86/x64 Assembly
+## 🛠️ x86/x64 Assembly
 
 - [x86/x64 Assembly Notes](./pwn.college/assembly/Readme.md) from [pwn.college](./pwn.college/Readme.md) course
 - [Simple HTTP server](pwn.college/webserver/server.asm)
