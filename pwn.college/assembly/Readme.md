@@ -57,7 +57,7 @@ bigger or smaller register accesses:
 ## 📖 Further Reading
 
 - An awesome intro series that covers some of the fundamentals from [LiveOverflow](https://www.youtube.com/watch?v=iyAyN3GFM7A&list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN&index=1).
-- A []`Ike: The Systems Hacking Handbook](https://ike.mahaloz.re/1_introduction/introduction.html), an excellent guide to Computer Organization.
+- A [`Ike: The Systems Hacking Handbook](https://ike.mahaloz.re/1_introduction/introduction.html), an excellent guide to Computer Organization.
 - A [comprehensive assembly tutorial](https://github.com/mytechnotalent/Reverse-Engineering-Tutorial) for several architectures (amd64 is the relevant one here).
 - The course ["Architecture 1001: x86-64 Assembly"](https://ost2.fyi/Arch1001) from OpenSecurityTraining2.
 - A whole [x86_64 assembly book](https://open.umn.edu/opentextbooks/textbooks/733) to help you out!
