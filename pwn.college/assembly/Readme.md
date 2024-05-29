@@ -2,6 +2,51 @@
 
 pwn.college [Assembly Crash Course](https://pwn.college/fundamentals/assembly-crash-course/) dojo.
 
+## GNU Assembler - GAS
+
+The dojo specifies using `as` to work through the exercises using Intel format.
+
+The base `asm.s` file should look like this,
+
+```assembly
+.intel_syntax noprefix
+
+.global _start
+
+.text
+_start:
+    mov rdi, 0x1337
+```
+
+To assemble and submit it for the exercises,
+
+```sh
+as -o asm.o asm.s
+objcopy -O binary --only-section=.text ./asm.o ./asm.bin
+cat ./asm.bin | /challenge/run
+```
+
+## NASM
+
+I prefer using [NASM]() for x86 assembly.
+
+The base `asm.asm` file should look like this,
+
+```assembly
+bits 64
+section .text
+
+_start:
+    mov rdi, 0x1337
+```
+
+To assemble and submit it for the exercises,
+
+```sh
+nasm -f bin -o asm.bin asm.asm
+cat ./asm.bin | /challenge/run
+```
+
 ## Registers
 
 | 64-bit register | Lowest 32-bits | Lowest 16-bits | 2nd Lowest 8-bits | Lowest 8-bits |
