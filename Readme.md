@@ -37,7 +37,8 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 ## 🐞 GDB
 
 - [Running programs](./gdb/notes.md#running-a-program)
-- [Display registers](./gdb/notes.md#displaying-registers)
+- [Display registers](./gdb/notes.md#display-registers)
+- [Display memory](./gdb/notes.md#display-memory)
 
 ## 🌿 Git
 
