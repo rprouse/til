@@ -10,3 +10,9 @@ For all of the following, append any program arguments to the command. For examp
 - `attach <PID>` to attach to a running program
 - `core <PATH>` to analyze a coredump
 - `continue` or `c` to continue execution after a breakpoint
+
+## Displaying registers
+
+- `info registers` to display all registers
+- `p $rdi` to print out the value of a register
+- `p/x $rdi` to print out the value of a register in hex
