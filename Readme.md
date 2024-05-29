@@ -34,6 +34,10 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 
 - [SMD Resistor & Capacitor Sizes](./electronics/smd-resistors.md)
 
+## 🐞 GDB
+
+- [GDB notes](./gdb/notes.md)
+
 ## 🌿 Git
 
 - [Revert the Last Commit](./git/revert-last-commit.md)
