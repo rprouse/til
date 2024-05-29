@@ -39,6 +39,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [Running programs](./gdb/notes.md#running-a-program)
 - [Display registers](./gdb/notes.md#display-registers)
 - [Display memory](./gdb/notes.md#display-memory)
+- [Stepping through a program](./gdb/notes.md#stepping-through-a-program)
 
 ## 🌿 Git
 

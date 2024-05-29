@@ -33,3 +33,14 @@ For all of the following, append any program arguments to the command. For examp
 - `x/16i main` will print the first 16 instructions of main.
 - `x/16gx $rsp` will print the first 16 values on the stack.
 - `x/gx $rbp-0x32` will print the local variable stored there on the stack.
+
+## Stepping through a program
+
+When stepping through machine instructions, it is useful to first set `display/i $pc` to automatically display the next instruction each time the program stops.
+
+- `step [count]` or `s` steps to the next source line. This is only useful if the program was compiled with debug information. Count is an optional repeat. It will step into calls.
+- `stepi [count]` or `si` steps one machine instruction. Count is an optional repeat. It will step into calls.
+- `next [count]` or `n` works like `step` but it will step over function calls.
+- `nexti [count]` or `ni` works like `stepi` but it will step over function calls.
+- `finish` or `fin` continues until a stack frame returns and prints the return value if any. Think of it as step out.
+- `until` or `u` is like `finish` but it is steps out of a loop. I.E. it will not jump back.
