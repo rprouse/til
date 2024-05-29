@@ -1,5 +1,19 @@
 # GDB Notes
 
+## .gdbinit
+
+The `~/.gdbinit` file is used to add default commands, breakpoints and user defined commands for GDB sessions. The file can be `~/.config/gdb/gdbinit`, `~/.gdbinit` or `./.gdbinit` for a particular project.
+
+For example,
+
+```sh
+set auto-load safe-path /
+set disassembly-flavor intel
+break main
+```
+
+For a more complete option, see [Gdbinit/gdbinit](https://github.com/gdbinit/Gdbinit/blob/master/gdbinit) on GitHub.
+
 ## Running a program
 
 For all of the following, append any program arguments to the command. For example, `start <ARGV1> <ARGV2> <ARGVN> < <STDIN_PATH>`.
@@ -36,7 +50,9 @@ For all of the following, append any program arguments to the command. For examp
 
 ## Stepping through a program
 
-When stepping through machine instructions, it is useful to first set `display/i $pc` to automatically display the next instruction each time the program stops.
+When stepping through machine instructions, it is useful to first set `display/i $pc` to automatically display the next instruction each time the program stops. You could also use `display/4gx $rsp` to show the next four instructions.
+
+You can also use `layout regs` to put GDB into its TUI mode and show you the contents of all of the registers, as well as nearby instructions.
 
 - `step [count]` or `s` steps to the next source line. This is only useful if the program was compiled with debug information. Count is an optional repeat. It will step into calls.
 - `stepi [count]` or `si` steps one machine instruction. Count is an optional repeat. It will step into calls.
@@ -44,3 +60,4 @@ When stepping through machine instructions, it is useful to first set `display/i
 - `nexti [count]` or `ni` works like `stepi` but it will step over function calls.
 - `finish` or `fin` continues until a stack frame returns and prints the return value if any. Think of it as step out.
 - `until` or `u` is like `finish` but it is steps out of a loop. I.E. it will not jump back.
+- `break *<address>` sets a breakpoint at an address.
