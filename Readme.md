@@ -40,6 +40,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [Display registers](./gdb/gdb_notes.md#display-registers)
 - [Display memory](./gdb/gdb_notes.md#display-memory)
 - [Stepping through a program](./gdb/gdb_notes.md#stepping-through-a-program)
+- [TUI](./gdb/gdb_tui.md) text user interface
 
 ## 🌿 Git
 
