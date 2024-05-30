@@ -61,3 +61,28 @@ You can also use `layout regs` to put GDB into its TUI mode and show you the con
 - `finish` or `fin` continues until a stack frame returns and prints the return value if any. Think of it as step out.
 - `until` or `u` is like `finish` but it is steps out of a loop. I.E. it will not jump back.
 - `break *<address>` sets a breakpoint at an address.
+
+## Setting register and memory values
+
+The `set` command can be used to modify the state of a program. For example,
+
+- `set $rdi = 0` will zero out the RDI register
+- `set *((uint64_t *) $rsp) = 0x1234` will set the first value on the stack to 0x1234
+- `set *((uint16_t *) 0x31337000) = 0x1337` will set 2 bytes at 0x31337000 to 0x1337
+
+## Redirecting system calls
+
+Given a networked application which reads from some socket on fd 42. It might be easier if it instead read from stdin. This can be done with the following gdb script:
+
+```txt
+start
+catch syscall read
+commands
+  silent
+  if ($rdi == 42)
+    set $rdi = 0
+  end
+  continue
+end
+continue
+```
