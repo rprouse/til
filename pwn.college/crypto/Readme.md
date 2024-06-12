@@ -1,6 +1,6 @@
-# Intro to Cybersecurity
+# Cryptography
 
-pwn.college [Intro to Cybersecurity](https://pwn.college/intro-to-cybersecurity/cryptography/) dojo.
+pwn.college [Cryptography](https://pwn.college/intro-to-cybersecurity/cryptography/) dojo.
 
 ## One Time Pad OTP
 
