@@ -211,3 +211,57 @@ run.sendline(hex(response))
 # Pwn the flag
 log.info(run.recvall())
 ```
+
+## Level 12 - RSA Encryption/Decryption with key exchange
+
+In this challenge you will complete an RSA challenge-response. You will provide the public key.
+
+```python
+#!/usr/bin/env python3
+
+import sys
+import base64
+
+from Crypto.PublicKey import RSA
+
+from pwn import *
+
+def show(name, value, *, b64=True):
+    log.info(f"{name}: {value}")
+
+def show_b64(name, value):
+    show(f"{name} (b64)", base64.b64encode(value).decode())
+
+def show_hex(name, value):
+    show(name, hex(value))
+
+# Run the challenge using pwntools
+run = process(b"/challenge/run")
+
+# Generate and send the key
+key = RSA.generate(1024)
+
+run.recvuntil(b"e: ")
+run.sendline(hex(key.e).encode('ascii'))
+run.recvuntil(b"n: ")
+run.sendline(hex(key.n).encode('ascii'))
+
+# Read the challenge
+run.recvuntil(b"challenge: ")
+challengestr = run.recvline().strip();
+challenge = int(challengestr, 16)
+show_hex("challenge", challenge)
+
+# Calculate and send the response
+response = pow(challenge, key.d, key.n)
+run.recvuntil(b"response: ")
+run.sendline(hex(response).encode('ascii'))
+
+# Pwn the flag
+run.recvuntil(b"(b64): ")
+cipherb64 = run.recvline().strip();
+show("cipherb64", cipherb64)
+cipher = base64.b64decode(cipherb64)
+flag = pow(int.from_bytes(cipher, "little"), key.d, key.n).to_bytes(256, "little")
+log.info(flag)
+```
