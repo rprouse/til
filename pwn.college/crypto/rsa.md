@@ -1,0 +1,103 @@
+# RSA (Rivest-Shamir-Adleman) Asymmetric Encryption
+
+In math, they symbol ≡ means identical to. ϕ is phi from Euler's theorum.
+
+## RSA Key Generation
+
+1. Choose two large prime numbers `p` and `q`
+2. Compute `n = pq`
+3. Compute phi of n `ϕ(n) = (p-1)(q-1)`
+4. Choose `e` such that `gcd(e, ϕ(n)) = 1 (coprime)`
+   - The most common value for `e` is `0x10001` or `65537`
+5. Compute `d ≡ e^-1`
+
+```python
+from Crypto.PublicKey import RSA
+
+key = RSA.generate(2048)
+```
+
+## RSA Encryption
+
+`c ≡ m^e (mod n)`
+
+where
+
+- `m` is plaintext
+- `c` is ciphertext
+- `d` is the private key component
+- `n` is key modulus
+
+```python
+assert len(ciphertext) <= 256
+message = pow(int.from_bytes(, "little"), key.e, key.n).to_bytes(256, "little")
+```
+
+## RSA Decryption
+
+`m ≡ c^d (mod n)`
+
+where
+
+- `m` is plaintext
+- `c` is ciphertext
+- `e` is the public key component
+- `n` is key modulus
+
+```python
+assert len(message) <= 256
+ciphertext = pow(int.from_bytes(message, "little"), d, n).to_bytes(256, "little")
+```
+
+## Level 7
+
+In this challenge you will decrypt a secret encrypted with RSA (Rivest–Shamir–Adleman). You will be provided with both the public key and private key.
+
+```python
+#!/usr/bin/env python3
+
+import sys
+import base64
+
+from pwn import *
+
+def show(name, value, *, b64=True):
+    log.info(f"{name}: {value}")
+
+def show_b64(name, value):
+    show(f"{name} (b64)", base64.b64encode(value).decode())
+
+def show_hex(name, value):
+    show(name, hex(value))
+
+# Run the challenge using pwntools
+run = process(b"/challenge/run")
+
+# Read the RSA public exponent e
+run.recvuntil(b"e: ")
+estr = run.recvline().strip();
+e = int(estr, 16)
+show_hex("e", e)
+
+# Read the RSA private exponent d
+run.recvuntil(b"d: ")
+dstr = run.recvline().strip();
+d = int(dstr, 16)
+show_hex("d", d)
+
+# Read the RSA modulus
+run.recvuntil(b"n: ")
+nstr = run.recvline().strip();
+n = int(nstr, 16)
+show_hex("n", n)
+
+# Read the Base64 encoded secret
+run.recvuntil(b"secret ciphertext (b64): ")
+secretb64 = run.recvline().strip();
+secret = base64.b64decode(secretb64)
+show_b64("secret", secret)
+
+# Decrypt the RSA encrypted message
+plaintext = pow(int.from_bytes(secret, "little"), d, n).to_bytes(256, "little")
+log.info(plaintext)
+```
