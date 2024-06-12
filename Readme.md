@@ -25,6 +25,11 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [List repositories in an Azure DevOps Project](./csharp/ado-repos.md)
 - [Read a CSV File](./csharp/read-csv.md)
 
+## 📡 Cryptography
+
+- [One Time Pad](./pwn.college/crypto/otp.md) (OTP)
+- [AES Decryption](./pwn.college/crypto/aes.md) using the ECB mode of operation
+
 ## 📦 Docker
 
 - [Running a Container](./docker/running-container.md)
