@@ -6,6 +6,8 @@ Learning to hack!
 
 ![Wax on, wax off](https://media4.giphy.com/media/J2xkAW1E8kvyE/giphy-downsized-medium.gif)
 
+A useful Python library for working through the exercises is [pwntools](https://github.com/Gallopsled/pwntools). Check out the [documentation](https://docs.pwntools.com/en/latest/).
+
 ## Optional Refreshers
 
 - [Program Misuse](./progarm_misuse/Readme.md)
