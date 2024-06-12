@@ -29,6 +29,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 
 - [One Time Pad](./pwn.college/crypto/otp.md) (OTP)
 - [AES Decryption](./pwn.college/crypto/aes.md) using the ECB mode of operation
+- [Diffie-Hellman](./diffie-hellman.md) key exchange
 
 ## 📦 Docker
 
