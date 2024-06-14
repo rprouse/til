@@ -31,6 +31,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [AES Decryption](./pwn.college/crypto/aes.md) using the ECB mode of operation
 - [Diffie-Hellman](./pwn.college/crypto/diffie-hellman.md) key exchange
 - [RSA](./pwn.college/crypto/rsa.md) (Rivest-Shamir-Adleman) Asymmetric Encryption
+- [Public Key Certificates](./pwn.college/crypto/public_key.md)
 
 ## 📦 Docker
 
