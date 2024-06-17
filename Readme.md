@@ -65,6 +65,8 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 
 - [pwn.college](./pwn.college/Readme.md) notes and code from working through the course.
 - [Packet Reassembly in Wireshark](./hacking/wireshark_stream.md)
+- [Web Command Injection](./pwn.college/web_security/Readme.md#level-2---command-injection)
+- [Web Authentication Bypass Vulnerability](./pwn.college/web_security/Readme.md#level-3---authentication-bypass-vulnerability)
 
 ## 🐧 Linux
 
