@@ -20,3 +20,4 @@ A useful Python library for working through the exercises is [pwntools](https://
 - [Intercepting Communication](./network_intercepts/Readme.md)
 - [Cryptography](./crypto/Readme.md)
 - [Access Control](./access/Readme.md)
+- [Web Security](./web_security/Readme.md)
