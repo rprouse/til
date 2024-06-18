@@ -67,7 +67,8 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [Packet Reassembly in Wireshark](./hacking/wireshark_stream.md)
 - [Web Command Injection](./pwn.college/web_security/command_injection.md) Vulnerability
 - [Web Authentication Bypass Vulnerability](./pwn.college/web_security/auth_bypass.md) Vulnerability
-- [SQL Injection](pwn.college/web_security/sql_injection.md) Vulnerabilities
+- [SQL Injection](./pwn.college/web_security/sql_injection.md) Vulnerabilities
+- [Cross-Site Scripting](./pwn.college/web_security/xss.md) (XSS) vlulnerabilities
 
 ## 🐧 Linux
 
