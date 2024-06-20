@@ -172,3 +172,92 @@ Then I call `/info` with the user id to get the flag,
 ```sh
 curl http://challenge.localhost/info?user=1
 ```
+
+## Level 13 - Exploit a cross site scripting vulnerability to exfiltrate user session data
+
+Code for this level,
+
+```python
+def level13():
+    app.config['SESSION_COOKIE_HTTPONLY'] = False
+
+    db.execute(("CREATE TABLE IF NOT EXISTS users AS "
+                'SELECT "flag" AS username, ? as password'),
+               (flag,))
+
+    if request.path == "/login":
+        if request.method == "POST":
+            username = request.form.get("username")
+            password = request.form.get("password")
+            assert username, "Missing `username` form"
+            assert password, "Missing `password` form"
+
+            user = db.execute(f"SELECT rowid, * FROM users WHERE username = ? AND password = ?", (username, password)).fetchone()
+            assert user, "Invalid `username` or `password`"
+
+            session["user"] = int(user["rowid"])
+            return redirect(request.path)
+
+        return form(["username", "password"])
+
+    if request.path == "/info":
+        session_user_id = int(session.get("user", -1))
+        session_user = db.execute("SELECT * FROM users WHERE rowid = ?", (session_user_id,)).fetchone()
+
+        request_user_id = int(request.args.get("user", session_user_id))
+        request_user = db.execute("SELECT * FROM users WHERE rowid = ?", (request_user_id,)).fetchone()
+        assert request_user, "Invalid `user`"
+
+        info = [request_user["username"]]
+        if request_user_id == session_user_id:
+            info.append(request_user["password"])
+        return " ".join(info) + "\n"
+
+    if request.path == "/visit":
+        url = request.args.get("url")
+        assert url, "Missing `url` argument"
+
+        url_arg_parsed = urllib.parse.urlparse(url)
+        assert url_arg_parsed.hostname == challenge_host, f"Invalid `url`, hostname should be `{challenge_host}`"
+
+        with run_browser() as browser:
+            browser.get(f"http://{challenge_host}/login")
+
+            user_form = {
+                "username": "flag",
+                "password": flag,
+            }
+            for name, value in user_form.items():
+                field = browser.find_element(By.NAME, name)
+                field.send_keys(value)
+
+            submit_field = browser.find_element(By.ID, "submit")
+            submit_field.submit()
+            WebDriverWait(browser, 10).until(EC.staleness_of(submit_field))
+
+            browser.get(url)
+            time.sleep(1)
+
+        return "Visited\n"
+
+    if request.path == "/echo":
+        echo = request.args.get("echo")
+        assert echo, "Missing `echo` argument"
+        return html(echo)
+
+    return "Not Found\n", 404
+```
+
+This has a similar structure to [Level 11](./csrf.md#level-11---exploit-a-cross-site-request-forgery-vulnerability) and [Level 12](./csrf.md#level-12---exploit-a-cross-site-request-forgery-vulnerability-where-the-request-must-post).
+
+In this case, the `/info` route will leak the flag if the user is logged in.
+
+```sh
+curl http://challenge.localhost/visit?url=http://challenge.localhost/info
+```
+
+and then get the flag with,
+
+```sh
+curl http://challenge.localhost/info?user=1
+```
