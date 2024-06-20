@@ -70,6 +70,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [SQL Injection](./pwn.college/web_security/sql_injection.md) Vulnerabilities
 - [Cross-Site Scripting](./pwn.college/web_security/xss.md) (XSS) vlulnerabilities
 - [Cross-Site Request Forgery](./pwn.college/web_security/csrf.md) (CSRF) Vulnerabilities
+- [SMB](./hacking/smb.md) Server Message Block
 
 ## 🐧 Linux
 
