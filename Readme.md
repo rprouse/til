@@ -70,6 +70,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [nmap](./hacking/nmap.md) Network Mapper
 - [gobuster](./hacking/gobuster.md) Directory/File, DNS and VHost busting tool
 - [Packet Reassembly in Wireshark](./hacking/wireshark_stream.md)
+- Session [Logging](./hacking/logging.md)
 
 ### Vulnerabilities
 
