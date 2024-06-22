@@ -1,6 +1,7 @@
 # File Inclusion Vulnerability
 
-Learned from Hack The Box [Starting Point](https://app.hackthebox.com/starting-point) **Responder** .
+- Learned from Hack The Box [Starting Point](https://app.hackthebox.com/starting-point) **Responder**.
+- Wordlist of [common vulnerable files](https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion_windows.txt).
 
 ## Overview
 
