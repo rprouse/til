@@ -130,9 +130,9 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [Install Desktop and RDP Access in a WSL Distro](./wsl/install-rdp.md)
 - [Set the Default User back from Root after Importing WSL Distro](./wsl/set-default-user.md)
 
-## 🪟 WinGet
+## 🪟 Windows
 
-- [Install WinGet](./winget/install-winget.md)
+- [Install WinGet](./windows/install-winget.md)
 
 ## 🛠️ x86/x64 Assembly
 
