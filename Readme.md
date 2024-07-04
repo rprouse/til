@@ -89,6 +89,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [Curl notes](./pwn.college/talking_web/Readme.md#curl)
 - [Set IP address](./linux/ifconfig.md#set-the-ip-address-of-an-interface)
 - [Security Hardening](./linux/hardening.md) a Debian based Linux box
+- [OpenVPN](./linux/openvpn.md)
 
 ## 📄 NeoVim
 
@@ -130,6 +131,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [Install WSL2](./wsl/install-wsl.md)
 - [Install Desktop and RDP Access in a WSL Distro](./wsl/install-rdp.md)
 - [Set the Default User back from Root after Importing WSL Distro](./wsl/set-default-user.md)
+- [OpenVPN](./linux/openvpn.md)
 
 ## 🪟 Windows
 
