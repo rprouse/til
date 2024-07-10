@@ -91,6 +91,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [Set IP address](./linux/ifconfig.md#set-the-ip-address-of-an-interface)
 - [Security Hardening](./linux/hardening.md) a Debian based Linux box
 - [OpenVPN](./linux/openvpn.md)
+- [Change default shell](./linux/default_shell.md)
 
 ## 📄 NeoVim
 
