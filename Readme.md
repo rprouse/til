@@ -92,6 +92,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [Security Hardening](./linux/hardening.md) a Debian based Linux box
 - [OpenVPN](./linux/openvpn.md)
 - [Change default shell](./linux/default_shell.md)
+- [Zoxide](./linux/zoxide.md) a smarter `cd` command
 
 ## 📄 NeoVim
 
@@ -100,6 +101,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 ## 🐚 PowerShell
 
 - [Upgrade Oh My Posh](./powershell/upgrade-oh-my-posh.md)
+- [Zoxide](./linux/zoxide.md) a smarter `cd` command
 
 ## 🐍 Python
 
