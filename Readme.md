@@ -136,6 +136,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 
 - [Install WSL2](./wsl/install-wsl.md)
 - [Install Desktop and RDP Access in a WSL Distro](./wsl/install-rdp.md)
+- [Move WSL to another Drive](./wsl/move_wsl.md)
 - [Set the Default User back from Root after Importing WSL Distro](./wsl/set-default-user.md)
 - [OpenVPN](./linux/openvpn.md)
 
