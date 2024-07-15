@@ -9,6 +9,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 ## 📱 Android Development
 
 - [ADB Error Logs](./android/adb_error_logs.md)
+- [Move the Android SDK to another Drive](./android/move_sdk.md)
 
 ## ☁️ Azure
 
