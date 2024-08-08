@@ -61,6 +61,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [Calculate Git commits by Author on all branches in C#](./csharp/git-commits.md)
 - [Format the oneline output](./git/format-output.md)
 - [Git Shallow Clone](./git/shallow-clone.md)
+- [Git Submodules](./git/submodules.md)
 
 ## 👨‍💻 Hacking / Cybersecurity
 
