@@ -140,6 +140,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [Move WSL to another Drive](./wsl/move_wsl.md)
 - [Set the Default User back from Root after Importing WSL Distro](./wsl/set-default-user.md)
 - [OpenVPN](./linux/openvpn.md)
+- [Connect USB device to WSL](./wsl/usb.md)
 
 ## 🪟 Windows
 
