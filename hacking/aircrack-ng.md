@@ -99,3 +99,14 @@ This will go through the possibilities in the wordlist and use them to attempt t
       EAPOL HMAC     : 1B BB D0 54 AF FB 0E 2B 77 DB 77 A4 62 27 DC 25
 ```
 
+## Bringing the network back up
+
+Once you are done, you will need to restart the network services that were killed and bring the network adapters back up.
+
+```sh
+sudo service NetworkManager restart
+sudo airmon-ng stop wlan0mon
+sudo ifconfig wlan0 up
+ip a
+```
+
