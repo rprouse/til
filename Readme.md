@@ -67,6 +67,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 
 - [pwn.college](./pwn.college/Readme.md) notes and code from working through the course.
 - [Hack The Box](./hackthebox/Readme.md) notes from working through challenges.
+- [Cracking WiFi WPA2-PSK2 with aircrack-ng](./hacking/aircrack-ng.md).
 
 ### Tools
 
