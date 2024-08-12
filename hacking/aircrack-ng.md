@@ -104,9 +104,9 @@ This will go through the possibilities in the wordlist and use them to attempt t
 Once you are done, you will need to restart the network services that were killed and bring the network adapters back up.
 
 ```sh
+sudo service wpa_supplicant restart
 sudo service NetworkManager restart
 sudo airmon-ng stop wlan0mon
 sudo ifconfig wlan0 up
 ip a
 ```
-
