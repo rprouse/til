@@ -1,5 +1,7 @@
 # Connect USB device to WSL
 
+For WiFI drivers, you may need to [Recompile the Linux Kernel](./kernel.md).
+
 Install `usbipd`,
 
 ```sh
