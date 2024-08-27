@@ -17,7 +17,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 
 ## 💻 C
 
-- [Open and listen on a network port](./pwn.college/network_intercepts/Readme.md#listen-to-a-port)
+- [Open and listen on a network port](./hacking/pwn.college/network_intercepts/Readme.md#listen-to-a-port)
 
 ## 🔫 C#/CSharp
 
@@ -28,12 +28,12 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 
 ## 📡 Cryptography
 
-- [One Time Pad](./pwn.college/crypto/otp.md) (OTP)
-- [AES Decryption](./pwn.college/crypto/aes.md) using the ECB mode of operation
-- [Diffie-Hellman](./pwn.college/crypto/diffie-hellman.md) key exchange
-- [RSA](./pwn.college/crypto/rsa.md) (Rivest-Shamir-Adleman) Asymmetric Encryption
-- [Public Key Certificates](./pwn.college/crypto/public_key.md)
-- [TLS Handshake](./pwn.college/crypto/tls.md)
+- [One Time Pad](./hacking/pwn.college/crypto/otp.md) (OTP)
+- [AES Decryption](./hacking/pwn.college/crypto/aes.md) using the ECB mode of operation
+- [Diffie-Hellman](./hacking/pwn.college/crypto/diffie-hellman.md) key exchange
+- [RSA](./hacking/pwn.college/crypto/rsa.md) (Rivest-Shamir-Adleman) Asymmetric Encryption
+- [Public Key Certificates](./hacking/pwn.college/crypto/public_key.md)
+- [TLS Handshake](./hacking/pwn.college/crypto/tls.md)
 
 ## 📦 Docker
 
@@ -65,9 +65,8 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 
 ## 👨‍💻 Hacking / Cybersecurity
 
-- [pwn.college](./pwn.college/Readme.md) notes and code from working through the course.
-- [Hack The Box](./hackthebox/Readme.md) notes from working through challenges.
-- [Cracking WiFi WPA2-PSK2 with aircrack-ng](./hacking/aircrack-ng.md).
+- [pwn.college](./hacking/pwn.college/Readme.md) notes and code from working through the course.
+- [Hack The Box](./hacking/hackthebox/Readme.md) notes from working through challenges.
 
 ### Tools
 
@@ -78,11 +77,12 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 
 ### Vulnerabilities
 
-- [Web Command Injection](./pwn.college/web_security/command_injection.md) Vulnerability
-- [Web Authentication Bypass Vulnerability](./pwn.college/web_security/auth_bypass.md) Vulnerability
-- [SQL Injection](./pwn.college/web_security/sql_injection.md) Vulnerabilities
-- [Cross-Site Scripting](./pwn.college/web_security/xss.md) (XSS) vlulnerabilities
-- [Cross-Site Request Forgery](./pwn.college/web_security/csrf.md) (CSRF) Vulnerabilities
+- [Cracking WiFi WPA2-PSK2 with aircrack-ng](./hacking/aircrack-ng.md).
+- [Web Command Injection](./hacking/pwn.college/web_security/command_injection.md) Vulnerability
+- [Web Authentication Bypass Vulnerability](./hacking/pwn.college/web_security/auth_bypass.md) Vulnerability
+- [SQL Injection](./hacking/pwn.college/web_security/sql_injection.md) Vulnerabilities
+- [Cross-Site Scripting](./hacking/pwn.college/web_security/xss.md) (XSS) vlulnerabilities
+- [Cross-Site Request Forgery](./hacking/pwn.college/web_security/csrf.md) (CSRF) Vulnerabilities
 - [SMB](./hacking/smb.md) Server Message Block
 - [File Inclusion](./hacking/file_inclusion.md) vulnerability
 
@@ -90,7 +90,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 
 - [Man](./linux/man.md) notes
 - [Switch to Virtual Consoles (TTYs)](./linux/switch-tty.md)
-- [Curl notes](./pwn.college/talking_web/Readme.md#curl)
+- [Curl notes](./hacking/pwn.college/talking_web/Readme.md#curl)
 - [Set IP address](./linux/ifconfig.md#set-the-ip-address-of-an-interface)
 - [Security Hardening](./linux/hardening.md) a Debian based Linux box
 - [OpenVPN](./linux/openvpn.md)
@@ -109,8 +109,8 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 
 ## 🐍 Python
 
-- [HTTP GET and POST](./pwn.college/talking_web/Readme.md#python)
-- [Running external processes](./pwn.college/progarm_misuse/Readme.md#python)
+- [HTTP GET and POST](./hacking/pwn.college/talking_web/Readme.md#python)
+- [Running external processes](./hacking/pwn.college/progarm_misuse/Readme.md#python)
 
 ## 🕹️ Retro Computers
 
@@ -149,9 +149,9 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 
 ## 🛠️ x86/x64 Assembly
 
-- [x86/x64 Assembly Notes](./pwn.college/assembly/Readme.md) from [pwn.college](./pwn.college/Readme.md) course
+- [x86/x64 Assembly Notes](./hacking/pwn.college/assembly/Readme.md) from [pwn.college](./hacking/pwn.college/Readme.md) course
 - [BIOS Interrupts](./x86asm/bios_int.md)
-- [Simple HTTP server](./pwn.college/webserver/server.asm)
+- [Simple HTTP server](./hacking/pwn.college/webserver/server.asm)
 
 ## ❓About
 
