@@ -67,6 +67,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 
 - [pwn.college](./hacking/pwn.college/Readme.md) notes and code from working through the course.
 - [Hack The Box](./hacking/hackthebox/Readme.md) notes from working through challenges.
+- [OWASP Juice Shop](./hacking/juice_shop.md) vulnerable application.
 
 ### Tools
 
