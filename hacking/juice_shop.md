@@ -8,3 +8,7 @@ The Juice Shop has a companion book [Pwning OWASP Juice Shop](https://pwning.owa
 
 - Run `docker run -d -p 127.0.0.1:3000:3000 bkimminich/juice-shop` to launch the container with that image.
 - Browse to http://localhost:3000.
+
+## Notes
+
+- Admin email is `admin@juice-sh.op` and password is `admin123`
