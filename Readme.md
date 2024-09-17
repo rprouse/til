@@ -98,6 +98,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [Change default shell](./linux/default_shell.md)
 - [Zoxide](./linux/zoxide.md) a smarter `cd` command
 - [Install Nerd Fonts](./linux/nerd_fonts.md) on Linux using a script
+- [timesyncd](./linux/timesyncd.md) a lightweight `ntpd` time sync deamon
 
 ## 📄 NeoVim
 
