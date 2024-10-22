@@ -6,6 +6,10 @@ A collection of short write-ups on small things I learn day to day across a vari
 
 I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/) and if I ever get back to it, posts on more modern technologies and programming are at [Alteridem.Net](https://alteridem.net/).
 
+## 🤖 Artificial Intelligence (AI)
+
+- [Set the GPU Affinity of Ollama on Windows](./ai/gpu_affinity.md)
+
 ## 📱 Android Development
 
 - [ADB Error Logs](./android/adb_error_logs.md)
