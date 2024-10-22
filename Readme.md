@@ -9,6 +9,9 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 ## 🤖 Artificial Intelligence (AI)
 
 - [Set the GPU Affinity of Ollama on Windows](./ai/gpu_affinity.md)
+- [Move Ollama models](./ai/ollama_models.md)
+- [Install Open WebUI](./ai/open_webui.md)
+- [Install Fabric AI](./ai/fabric.md)
 
 ## 📱 Android Development
 
