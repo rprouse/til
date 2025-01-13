@@ -33,6 +33,7 @@ I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/
 - [List repositories in an Azure DevOps Project](./csharp/ado-repos.md)
 - [Read a CSV File](./csharp/read-csv.md)
 - ASP.NET [Renew development SSL Certificates](./csharp/aspnet-ssl.md)
+- [InternalsVisibleTo](./csharp/internalsvisibleto.md) for test projects.
 
 ## 📡 Cryptography
 
