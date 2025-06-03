@@ -5,6 +5,10 @@
       "path": "Readme.md"
     },
     {
+      "basename": "dotnet_run_app",
+      "path": "csharp/dotnet_run_app.md"
+    },
+    {
       "basename": "make",
       "path": "c/make.md"
     },

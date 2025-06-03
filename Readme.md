@@ -37,6 +37,7 @@ git config core.eol lf
 - [Read a CSV File](./csharp/read-csv.md)
 - ASP.NET [Renew development SSL Certificates](./csharp/aspnet-ssl.md)
 - [InternalsVisibleTo](./csharp/internalsvisibleto.md) for test projects.
+- [dotnet run app.cs](./csharp/dotnet_run_app.md)
 ## 📡 Cryptography
 
 - [One Time Pad](./hacking/pwn.college/crypto/otp.md) (OTP)
