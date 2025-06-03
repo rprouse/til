@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "move_sdk",
+      "path": "android/move_sdk.md"
+    },
+    {
+      "basename": "adb_error_logs",
+      "path": "android/adb_error_logs.md"
+    },
+    {
       "basename": "Readme",
       "path": "Readme.md"
+    },
+    {
+      "basename": "CONTRIBUTING",
+      "path": "CONTRIBUTING.md"
     },
     {
       "basename": "Untitled",
