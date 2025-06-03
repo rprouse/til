@@ -18,20 +18,17 @@ git config core.eol lf
 - [Move Ollama models](./ai/ollama_models.md)
 - [Install Open WebUI](./ai/open_webui.md)
 - [Install Fabric AI](./ai/fabric.md)
-
 ## 📱 Android Development
 
 - [ADB Error Logs](./android/adb_error_logs.md)
 - [Move the Android SDK to another Drive](./android/move_sdk.md)
-
 ## ☁️ Azure
 
 - [Local Azure Storage Development](./azure/azurite.md)
-
 ## 💻 C
 
 - [Open and listen on a network port](./hacking/pwn.college/network_intercepts/Readme.md#listen-to-a-port)
-
+- [Make Notes](./c/make.md)
 ## 🔫 C#/CSharp
 
 - [Count Git merge commits by Author](./csharp/git-commits.md)
@@ -40,7 +37,6 @@ git config core.eol lf
 - [Read a CSV File](./csharp/read-csv.md)
 - ASP.NET [Renew development SSL Certificates](./csharp/aspnet-ssl.md)
 - [InternalsVisibleTo](./csharp/internalsvisibleto.md) for test projects.
-
 ## 📡 Cryptography
 
 - [One Time Pad](./hacking/pwn.college/crypto/otp.md) (OTP)
@@ -49,16 +45,13 @@ git config core.eol lf
 - [RSA](./hacking/pwn.college/crypto/rsa.md) (Rivest-Shamir-Adleman) Asymmetric Encryption
 - [Public Key Certificates](./hacking/pwn.college/crypto/public_key.md)
 - [TLS Handshake](./hacking/pwn.college/crypto/tls.md)
-
 ## 📦 Docker
 
 - [Running a Container](./docker/running-container.md)
 - [Attaching to a running container](./docker/attach-container.md)
-
 ## 📻 Electronics
 
 - [SMD Resistor & Capacitor Sizes](./electronics/smd-resistors.md)
-
 ## 🐞 GDB
 
 - [Running programs](./gdb/gdb_notes.md#running-a-program)
@@ -68,7 +61,6 @@ git config core.eol lf
 - [Setting register and memory values](./gdb/gdb_notes.md#setting-register-and-memory-values)
 - [Redirecting system calls](./gdb/gdb_notes.md#redirecting-system-calls)
 - [TUI](./gdb/gdb_tui.md) text user interface
-
 ## 🌿 Git
 
 - [Revert the Last Commit](./git/revert-last-commit.md)
@@ -77,20 +69,17 @@ git config core.eol lf
 - [Format the oneline output](./git/format-output.md)
 - [Git Shallow Clone](./git/shallow-clone.md)
 - [Git Submodules](./git/submodules.md)
-
 ## 👨‍💻 Hacking / Cybersecurity
 
 - [pwn.college](./hacking/pwn.college/Readme.md) notes and code from working through the course.
 - [Hack The Box](./hacking/hackthebox/Readme.md) notes from working through challenges.
 - [OWASP Juice Shop](./hacking/juice_shop.md) vulnerable application.
-
 ### Tools
 
 - [nmap](./hacking/nmap.md) Network Mapper
 - [gobuster](./hacking/gobuster.md) Directory/File, DNS and VHost busting tool
 - [Packet Reassembly in Wireshark](./hacking/wireshark_stream.md)
 - Session [Logging](./hacking/logging.md)
-
 ### Vulnerabilities
 
 - [Cracking WiFi WPA2-PSK2 with aircrack-ng](./hacking/aircrack-ng.md).
@@ -101,7 +90,6 @@ git config core.eol lf
 - [Cross-Site Request Forgery](./hacking/pwn.college/web_security/csrf.md) (CSRF) Vulnerabilities
 - [SMB](./hacking/smb.md) Server Message Block
 - [File Inclusion](./hacking/file_inclusion.md) vulnerability
-
 ## 🐧 Linux
 
 - [Man](./linux/man.md) notes
@@ -114,23 +102,18 @@ git config core.eol lf
 - [Zoxide](./linux/zoxide.md) a smarter `cd` command
 - [Install Nerd Fonts](./linux/nerd_fonts.md) on Linux using a script
 - [timesyncd](./linux/timesyncd.md) a lightweight `ntpd` time sync deamon
-
 ## 📄 NeoVim
 
 - [Install NeoVim](./neovim/install-neovim.md)
-
 ## 🐚 PowerShell
 
 - [Upgrade Oh My Posh](./powershell/upgrade-oh-my-posh.md)
 - [Zoxide](./linux/zoxide.md) a smarter `cd` command
-
 ## 🐍 Python
 
 - [HTTP GET and POST](./hacking/pwn.college/talking_web/Readme.md#python)
 - [Running external processes](./hacking/pwn.college/progarm_misuse/Readme.md#python)
-
 ## 🕹️ Retro Computers
-
 ### Commodore 64
 
 - [CCGMS & WiModem](./retro/c64/ccgms.md)
@@ -138,19 +121,15 @@ git config core.eol lf
 - [SD2IEC](./retro/c64/SD2IEC.md)
 - [Supermon+64 V1.2](./retro/c64/supermod.md)
 - [Writing BASIC Files on the Computer and Transferring to the Commodore 64](./retro/c64/tokenize-basic.md)
-
 ### CP/M
 
 - [ZDE16](./retro/cpm/zde16.md)
-
 ## 📊 SQL
 
 - [Counting in a SQL Select based on the Column Value](./sql/where-in-select.md)
-
 ## 🗒️ TypeScript
 
 - [Setup a Yarn Project with TypeScript in VS Code](./typescript/setup-yarn-with-ts.md)
-
 ## 🐧 WSL
 
 - [Install WSL2](./wsl/install-wsl.md)
@@ -159,22 +138,17 @@ git config core.eol lf
 - [Set the Default User back from Root after Importing WSL Distro](./wsl/set-default-user.md)
 - [OpenVPN](./linux/openvpn.md)
 - [Connect USB device to WSL](./wsl/usb.md)
-
 ## 🪟 Windows
 
 - [Install WinGet](./windows/install-winget.md)
-
 ## 🛠️ x86/x64 Assembly
 
 - [x86/x64 Assembly Notes](./hacking/pwn.college/assembly/Readme.md) from [pwn.college](./hacking/pwn.college/Readme.md) course
 - [BIOS Interrupts](./x86asm/bios_int.md)
 - [Simple HTTP server](./hacking/pwn.college/webserver/server.asm)
-
 ## ❓About
 
-I shamelessly stole this idea and format from
-[jbranchaud/til](https://github.com/jbranchaud/til).
-
+I shamelessly stole this idea and format from [jbranchaud/til](https://github.com/jbranchaud/til). See [CONTRIBUTING](./CONTRIBUTING.md) if you would like to add or fix anything.
 ## 🔗 Other TIL Collections
 
 - [Today I Learned by Hashrocket](https://til.hashrocket.com)
@@ -183,8 +157,6 @@ I shamelessly stole this idea and format from
 
 ## ⚖️ License
 
-&copy; 2024 Rob Prouse
-
-This work is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. See [LICENSE](.\LICENSE) for details.
+ © 2024 Rob Prouse. This work is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. See [LICENSE](.\LICENSE) for details.
 
 ![CC BY-NC-SA](./img/by-nc-sa.png)

@@ -180,12 +180,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bd251560457f1336",
+  "active": "5f9b250e6aa41d7f",
   "lastOpenFiles": [
-    "android/adb_error_logs.md",
     "Readme.md",
-    "CONTRIBUTING.md",
+    "c/make.md",
+    "hacking/pwn.college/network_intercepts/Readme.md",
+    "hacking/pwn.college/webserver/Readme.md",
     "azure/Untitled.md",
+    "android/move_sdk.md",
+    "android/adb_error_logs.md",
+    "CONTRIBUTING.md",
     "azure/azurite.md",
     "ai/gpu_affinity.md"
   ]
