@@ -6,12 +6,15 @@ A collection of short write-ups on small things I learn day to day across a vari
 
 I blog longer form posts on Retro-Computing at [8-Bit Labs](https://8bitlabs.ca/) and if I ever get back to it, posts on more modern technologies and programming are at [Alteridem.Net](https://alteridem.net/).
 
+## 🔧 Setup
+
 Set the repo to LF endings so that I don't get screwed up jumping between Windows and Linux.
 
 ```sh
 git config core.autocrlf false
 git config core.eol lf
 ```
+
 ## 🤖 Artificial Intelligence (AI)
 
 - [Set the GPU Affinity of Ollama on Windows](./ai/gpu_affinity.md)
@@ -38,6 +41,8 @@ git config core.eol lf
 - ASP.NET [Renew development SSL Certificates](./csharp/aspnet-ssl.md)
 - [InternalsVisibleTo](./csharp/internalsvisibleto.md) for test projects.
 - [dotnet run app.cs](./csharp/dotnet_run_app.md)
+- Upgrade .NET Test Project from VSTest to [MTP](./csharp/mtp.md)
+- [Code Coverage](./csharp/coverage.md) with Coverlet in .NET
 ## 📡 Cryptography
 
 - [One Time Pad](./hacking/pwn.college/crypto/otp.md) (OTP)
@@ -112,6 +117,7 @@ git config core.eol lf
 - [Zoxide](./linux/zoxide.md) a smarter `cd` command
 ## 🐍 Python
 
+- [Python Cheat Sheet](./python/python_cheat_sheet.md)
 - [HTTP GET and POST](./hacking/pwn.college/talking_web/Readme.md#python)
 - [Running external processes](./hacking/pwn.college/progarm_misuse/Readme.md#python)
 ## 🕹️ Retro Computers

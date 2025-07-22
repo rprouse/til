@@ -23,8 +23,26 @@
               "icon": "lucide-file",
               "title": "Readme"
             }
+          },
+          {
+            "id": "fbccc703fae9608d",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python/python_cheat_sheet.md.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "python_cheat_sheet.md"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,8 +101,8 @@
             "state": {
               "type": "recent-files",
               "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           }
         ]
@@ -163,8 +181,19 @@
               "icon": "lucide-list",
               "title": "Outline of Readme"
             }
+          },
+          {
+            "id": "9207fd844d82e164",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -180,10 +209,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5f9b250e6aa41d7f",
+  "active": "fbccc703fae9608d",
   "lastOpenFiles": [
-    "csharp/dotnet_run_app.md",
+    "img/python-3.13.5-amd64.exe",
     "Readme.md",
+    "python/python_cheat_sheet.md.md",
+    "python",
+    "hacking/pwn.college/talking_web/Readme.md",
+    "csharp/internalsvisibleto.md",
+    "csharp/coverage.md",
+    "csharp/mtp.md",
+    "hacking/pwn.college/crypto/otp.md",
+    "csharp/dotnet_run_app.md",
     "c/make.md",
     "hacking/pwn.college/network_intercepts/Readme.md",
     "hacking/pwn.college/webserver/Readme.md",

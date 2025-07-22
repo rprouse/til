@@ -1,8 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "python_cheat_sheet.md",
+      "path": "python/python_cheat_sheet.md.md"
+    },
+    {
       "basename": "Readme",
       "path": "Readme.md"
+    },
+    {
+      "basename": "Readme",
+      "path": "hacking/pwn.college/talking_web/Readme.md"
+    },
+    {
+      "basename": "internalsvisibleto",
+      "path": "csharp/internalsvisibleto.md"
+    },
+    {
+      "basename": "coverage",
+      "path": "csharp/coverage.md"
+    },
+    {
+      "basename": "mtp",
+      "path": "csharp/mtp.md"
+    },
+    {
+      "basename": "otp",
+      "path": "hacking/pwn.college/crypto/otp.md"
     },
     {
       "basename": "dotnet_run_app",
