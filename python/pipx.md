@@ -1,6 +1,6 @@
 # pipx
 
-Installs and Runs Python Applications in Isolated Environments.
+Installs and Runs [Python](./python.md) Applications in Isolated Environments.
 ## Linux Install
 
 ```sh

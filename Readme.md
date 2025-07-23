@@ -117,11 +117,12 @@ git config core.eol lf
 - [Zoxide](./linux/zoxide.md) a smarter `cd` command
 ## 🐍 Python
 
-- [Python Cheat Sheet](./python/python_cheat_sheet.md)
-- [Working with Files in Python](./python/python_files.md)
+- [Python Cheat Sheet](python.md)
+- [Working with Files in Python](python_files.md)
 - [HTTP GET and POST](./hacking/pwn.college/talking_web/Readme.md#python)
 - [Running external processes](./hacking/pwn.college/progarm_misuse/Readme.md#python)
 - [pipx](./python/pipx.md)
+- [Poetry](./python/poetry.md)
 ## 🕹️ Retro Computers
 ### Commodore 64
 
