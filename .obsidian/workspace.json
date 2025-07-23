@@ -47,16 +47,17 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "python/python_cheat_sheet.md.md",
+                "file": "Readme.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "python_cheat_sheet.md"
+              "title": "Readme"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -222,11 +223,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9207fd844d82e164",
+  "active": "3cefb5beaf33f174",
   "lastOpenFiles": [
-    "python/python_files.md.md",
+    "python/pipx.md",
     "python/python_cheat_sheet.md.md",
     "Readme.md",
+    "python/python_files.md.md",
     "CONTRIBUTING.md",
     "retro/cpm/zde16.md",
     "img/python-3.13.5-amd64.exe",

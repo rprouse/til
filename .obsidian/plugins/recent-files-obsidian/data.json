@@ -5,12 +5,16 @@
       "path": "Readme.md"
     },
     {
-      "basename": "python_files.md",
-      "path": "python/python_files.md.md"
+      "basename": "pipx",
+      "path": "python/pipx.md"
     },
     {
       "basename": "python_cheat_sheet.md",
       "path": "python/python_cheat_sheet.md.md"
+    },
+    {
+      "basename": "python_files.md",
+      "path": "python/python_files.md.md"
     },
     {
       "basename": "CONTRIBUTING",
