@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Readme",
+      "path": "Readme.md"
+    },
+    {
+      "basename": "python_files.md",
+      "path": "python/python_files.md.md"
+    },
+    {
       "basename": "python_cheat_sheet.md",
       "path": "python/python_cheat_sheet.md.md"
     },
     {
-      "basename": "Readme",
-      "path": "Readme.md"
+      "basename": "CONTRIBUTING",
+      "path": "CONTRIBUTING.md"
+    },
+    {
+      "basename": "zde16",
+      "path": "retro/cpm/zde16.md"
     },
     {
       "basename": "Readme",
@@ -51,10 +63,6 @@
     {
       "basename": "adb_error_logs",
       "path": "android/adb_error_logs.md"
-    },
-    {
-      "basename": "CONTRIBUTING",
-      "path": "CONTRIBUTING.md"
     }
   ],
   "omittedPaths": [],

@@ -118,6 +118,7 @@ git config core.eol lf
 ## 🐍 Python
 
 - [Python Cheat Sheet](./python/python_cheat_sheet.md)
+- [Working with Files in Python](./python/python_files.md)
 - [HTTP GET and POST](./hacking/pwn.college/talking_web/Readme.md#python)
 - [Running external processes](./hacking/pwn.college/progarm_misuse/Readme.md#python)
 ## 🕹️ Retro Computers

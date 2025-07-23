@@ -2,11 +2,21 @@
 ## Program Structure
 
 ```python
-def main():  
-    print('Hello World!')  
-  
-if __name__ == '__main__':  
-    main()
+#!/usr/bin/python3
+
+# import modules used here -- sys is a very standard one
+import sys
+
+# Gather our code in a main() function
+def main():
+    print('Hello there', sys.argv[1])
+    # Command line args are in sys.argv[1], sys.argv[2] ...
+    # sys.argv[0] is the script name itself and can be ignored
+
+# Standard boilerplate to call the main() function to begin
+# the program.
+if __name__ == '__main__':
+    main()
 ```
 ## Arithmetic Operators
 | Operator | Name of Operation | Example  | Description                       |
@@ -123,10 +133,47 @@ class Teacher(Person):
 ```
 
 ## Strings
+
+```python
+# Multiline strings
+multi = """It was the best of times.
+It was the worst of times."""
+
+# Split the line into chunks, which are concatenated automatically by Python
+text = (
+    "%d little pigs come out, "
+    "or I'll %s, and I'll %s, "
+    "and I'll blow your %s down."
+    % (3, 'huff', 'puff', 'house'))
+```
+
+### Unicode vs Bytes
+
+Strings are unicode by default in Python. You can specify a byte string with a `b` prefix.
+
+```python
+byte_string = b'A byte string'
+```
+
+You can convert between them with `encode()`.
+
+```python
+> ustring = 'A unicode \u018e string \xf1'
+> b = ustring.encode('utf-8')
+> b
+b'A unicode \xc6\x8e string \xc3\xb1'  ## bytes of utf-8 encoding. Note the b-prefix.
+> t = b.decode('utf-8')                ## Convert bytes back to a unicode string
+> t == ustring                         ## It's the same as the original, yay!
+
+True
+```
 ### Formatted String Literals
 
 ```python
 print(f'Very nice to meet you, {name.upper()}!')
+
+value = 2.791514
+print(f'approximate value = {value:.2f}')  # approximate value = 2.79
 ```
 ### String Functions
 
@@ -298,6 +345,3 @@ set1.update(set2)       # { 1, 2, 3, 4, 5, 6 }
 students = {'Jane', 'Carlos', 'Amy', 'Bridgette', 'Chau', 'Dmitry'}  
 students.remove('Bridgette')
 ```
-
-
-
