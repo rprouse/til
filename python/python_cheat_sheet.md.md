@@ -258,3 +258,46 @@ shopping_list = {'jewelry': 'earrings', 'clothes': 'jeans', 'budget': 200}
 shopping_list.keys() # returns dict_keys(['jewelry', 'clothes', 'budget'])  
 shopping_list.values() # returns dict_values(['earrings', 'jeans', 200])
 ```
+## Sets
+
+A set is an immutable, unordered collection of **unique** elements that can consist of integers, floats, strings and tuples. A set is created with `{}` with items separated with commas. The function `set()` to convert a list into a set. Duplicates items are not included in a set.
+
+Sets do not have indexes or keys. You can use `in` to check if an element exists in the set.
+
+```python
+students = {'Jane', 'Carlos', 'Amy', 'Bridgette', 'Chau', 'Dmitry'}  
+  
+print('Chau' in students) # returns True
+```
+
+### Set Functions
+#### add()
+
+Items in a set are immutable, but you can add additional items with `add()`.
+
+```python
+students = {'Jane', 'Carlos', 'Amy', 'Bridgette', 'Chau', 'Dmitry'}  
+  
+students.add('George')  
+print('George' in students) # returns True
+```
+#### update() and union()
+
+`update()` adds the given items to the set whereas `union()` returns a new set which is the union of the two sets.
+
+```python
+set1 = { 1, 3, 5 }
+set2 = { 2, 4, 6 }
+
+set3 = set1.union(set2) # { 1, 2, 3, 4, 5, 6 }
+set1.update(set2)       # { 1, 2, 3, 4, 5, 6 }
+```
+#### remove()  
+
+```python
+students = {'Jane', 'Carlos', 'Amy', 'Bridgette', 'Chau', 'Dmitry'}  
+students.remove('Bridgette')
+```
+
+
+
