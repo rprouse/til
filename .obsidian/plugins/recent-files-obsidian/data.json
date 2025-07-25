@@ -1,24 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "poetry",
-      "path": "python/poetry.md"
+      "basename": "Readme",
+      "path": "Readme.md"
     },
     {
-      "basename": "python_files",
-      "path": "python/python_files.md"
+      "basename": "uv",
+      "path": "python/uv.md"
     },
     {
       "basename": "pipx",
       "path": "python/pipx.md"
     },
     {
-      "basename": "Readme",
-      "path": "Readme.md"
+      "basename": "poetry",
+      "path": "python/poetry.md"
     },
     {
       "basename": "python",
       "path": "python/python.md"
+    },
+    {
+      "basename": "python_files",
+      "path": "python/python_files.md"
     },
     {
       "basename": "CONTRIBUTING",

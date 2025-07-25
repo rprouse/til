@@ -71,19 +71,25 @@ square_lambda = lambda x: x ** 2
 The `map()` function applies the given lambda function to each item in a list:
 
 ```python
-numbers = [1, 2, 3, 4, 5] squared = list(map(lambda x: x ** 2, numbers)) print(squared)  # Output: [1, 4, 9, 16, 25] 
+numbers = [1, 2, 3, 4, 5] 
+squared = list(map(lambda x: x ** 2, numbers)) 
+print(squared)  # Output: [1, 4, 9, 16, 25] 
 ```
 ### Lambda with `filter()`
 The `filter()` function creates a new list of elements for which the given lambda function returns True:
 
 ```python
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] even_numbers = list(filter(lambda x: x % 2 == 0, numbers)) print(even_numbers)  # Output: [2, 4, 6, 8, 10] 
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers)) 
+print(even_numbers)  # Output: [2, 4, 6, 8, 10] 
 ```
 ### Lambda with `sorted()`
 The `sorted()` function can use a lambda function as a key for custom sorting:
 
 ```python
-students = [('Alice', 'A', 15), ('Bob', 'B', 12), ('Charlie', 'A', 20)] sorted_students = sorted(students, key=lambda x: x[2]) print(sorted_students) # Output: [('Bob', 'B', 12), ('Alice', 'A', 15), ('Charlie', 'A', 20)] 
+students = [('Alice', 'A', 15), ('Bob', 'B', 12), ('Charlie', 'A', 20)] 
+sorted_students = sorted(students, key=lambda x: x[2]) 
+print(sorted_students) # Output: [('Bob', 'B', 12), ('Alice', 'A', 15), ('Charlie', 'A', 20)] 
 ```
 
 ## Classes

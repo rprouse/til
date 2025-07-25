@@ -121,8 +121,9 @@ git config core.eol lf
 - [Working with Files in Python](python_files.md)
 - [HTTP GET and POST](./hacking/pwn.college/talking_web/Readme.md#python)
 - [Running external processes](./hacking/pwn.college/progarm_misuse/Readme.md#python)
-- [pipx](./python/pipx.md)
-- [Poetry](./python/poetry.md)
+- [pipx](./python/pipx.md) runs Python applications in isolated environments.
+- [Poetry](./python/poetry.md) packaging and dependency management.
+- [uv](./python/uv.md) Python package and project manager, written in Rust.
 ## 🕹️ Retro Computers
 ### Commodore 64
 
