@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "uv",
+      "path": "python/uv.md"
+    },
+    {
       "basename": "Readme",
       "path": "Readme.md"
     },
     {
-      "basename": "uv",
-      "path": "python/uv.md"
+      "basename": "python",
+      "path": "python/python.md"
     },
     {
       "basename": "pipx",
@@ -15,10 +19,6 @@
     {
       "basename": "poetry",
       "path": "python/poetry.md"
-    },
-    {
-      "basename": "python",
-      "path": "python/python.md"
     },
     {
       "basename": "python_files",
