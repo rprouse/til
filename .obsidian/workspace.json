@@ -30,13 +30,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "python/uv.md",
+                "file": "hacking/hackthebox/three.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "uv"
+              "title": "three"
             }
           }
         ],
@@ -195,8 +195,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 507.5,
-    "collapsed": true
+    "width": 684.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -210,8 +209,9 @@
   },
   "active": "d688b7800569d269",
   "lastOpenFiles": [
-    "Readme.md",
+    "hacking/hackthebox/Readme.md",
     "python/uv.md",
+    "Readme.md",
     "python/python.md",
     "python/pipx.md",
     "python/poetry.md",
