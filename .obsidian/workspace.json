@@ -30,17 +30,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "hacking/hackthebox/three.md",
+                "file": "linux/rclone.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "three"
+              "title": "rclone"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -207,8 +206,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d688b7800569d269",
+  "active": "5f9b250e6aa41d7f",
   "lastOpenFiles": [
+    "linux/rclone.md",
+    "x86asm/bios_int.md",
+    "hacking/hackthebox/three.md",
     "hacking/hackthebox/Readme.md",
     "python/uv.md",
     "Readme.md",

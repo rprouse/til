@@ -108,6 +108,7 @@ git config core.eol lf
 - [Zoxide](./linux/zoxide.md) a smarter `cd` command
 - [Install Nerd Fonts](./linux/nerd_fonts.md) on Linux using a script
 - [timesyncd](./linux/timesyncd.md) a lightweight `ntpd` time sync deamon
+- [Mount Google Drive on Linux using Rclone](./linux/rclone.md)
 ## 📄 NeoVim
 
 - [Install NeoVim](./neovim/install-neovim.md)
