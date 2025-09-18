@@ -5,6 +5,10 @@
       "path": "Readme.md"
     },
     {
+      "basename": "server-manager",
+      "path": "windows/server-manager.md"
+    },
+    {
       "basename": "rclone",
       "path": "linux/rclone.md"
     },

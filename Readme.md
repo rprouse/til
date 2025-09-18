@@ -153,6 +153,7 @@ git config core.eol lf
 ## 🪟 Windows
 
 - [Install WinGet](./windows/install-winget.md)
+- Stop [Server Manager](./windows/server-manager.md) from starting on Login to Windows Server
 ## 🛠️ x86/x64 Assembly
 
 - [x86/x64 Assembly Notes](./hacking/pwn.college/assembly/Readme.md) from [pwn.college](./hacking/pwn.college/Readme.md) course
