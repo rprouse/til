@@ -53,6 +53,21 @@
               "icon": "lucide-file",
               "title": "server-manager"
             }
+          },
+          {
+            "id": "6e8b3109b4505ecc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/tmux.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "tmux"
+            }
           }
         ]
       }
@@ -223,16 +238,17 @@
   },
   "active": "5f9b250e6aa41d7f",
   "lastOpenFiles": [
-    "windows/server-manager.md",
+    "linux/tmux.md",
     "Readme.md",
+    "python/uv.md",
+    "python/poetry.md",
+    "windows/server-manager.md",
     "linux/rclone.md",
     "x86asm/bios_int.md",
     "hacking/hackthebox/three.md",
     "hacking/hackthebox/Readme.md",
-    "python/uv.md",
     "python/python.md",
     "python/pipx.md",
-    "python/poetry.md",
     "python/python_files.md",
     "CONTRIBUTING.md",
     "retro/cpm/zde16.md",
@@ -249,7 +265,6 @@
     "hacking/pwn.college/webserver/Readme.md",
     "azure/Untitled.md",
     "android/move_sdk.md",
-    "android/adb_error_logs.md",
-    "azure/azurite.md"
+    "android/adb_error_logs.md"
   ]
 }

@@ -5,6 +5,18 @@
       "path": "Readme.md"
     },
     {
+      "basename": "tmux",
+      "path": "linux/tmux.md"
+    },
+    {
+      "basename": "uv",
+      "path": "python/uv.md"
+    },
+    {
+      "basename": "poetry",
+      "path": "python/poetry.md"
+    },
+    {
       "basename": "server-manager",
       "path": "windows/server-manager.md"
     },
@@ -25,20 +37,12 @@
       "path": "hacking/hackthebox/Readme.md"
     },
     {
-      "basename": "uv",
-      "path": "python/uv.md"
-    },
-    {
       "basename": "python",
       "path": "python/python.md"
     },
     {
       "basename": "pipx",
       "path": "python/pipx.md"
-    },
-    {
-      "basename": "poetry",
-      "path": "python/poetry.md"
     },
     {
       "basename": "python_files",
