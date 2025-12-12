@@ -69,7 +69,8 @@
               "title": "tmux"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -132,7 +133,8 @@
               "title": "Plugin no longer active"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -236,10 +238,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5f9b250e6aa41d7f",
+  "active": "3837decb784b56a7",
   "lastOpenFiles": [
-    "linux/tmux.md",
     "Readme.md",
+    "linux/tmux.md",
     "python/uv.md",
     "python/poetry.md",
     "windows/server-manager.md",

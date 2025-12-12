@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "Readme",
-      "path": "Readme.md"
-    },
-    {
       "basename": "tmux",
       "path": "linux/tmux.md"
+    },
+    {
+      "basename": "Readme",
+      "path": "Readme.md"
     },
     {
       "basename": "uv",
