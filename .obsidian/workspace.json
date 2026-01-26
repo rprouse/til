@@ -60,13 +60,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linux/tmux.md",
+                "file": "retro/c64/ccgms.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "tmux"
+              "title": "ccgms"
             }
           }
         ],
@@ -129,12 +129,12 @@
             "state": {
               "type": "recent-files",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "icon": "clock",
+              "title": "Recent Files"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -226,7 +226,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 684.5
+    "width": 294.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -238,10 +238,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3837decb784b56a7",
+  "active": "6e8b3109b4505ecc",
   "lastOpenFiles": [
-    "Readme.md",
+    "retro/c64/tokenize-basic.md",
     "linux/tmux.md",
+    "Readme.md",
     "python/uv.md",
     "python/poetry.md",
     "windows/server-manager.md",
@@ -266,7 +267,6 @@
     "hacking/pwn.college/network_intercepts/Readme.md",
     "hacking/pwn.college/webserver/Readme.md",
     "azure/Untitled.md",
-    "android/move_sdk.md",
-    "android/adb_error_logs.md"
+    "android/move_sdk.md"
   ]
 }

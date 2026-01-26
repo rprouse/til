@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "ccgms",
+      "path": "retro/c64/ccgms.md"
+    },
+    {
+      "basename": "tokenize-basic",
+      "path": "retro/c64/tokenize-basic.md"
+    },
+    {
       "basename": "tmux",
       "path": "linux/tmux.md"
     },
