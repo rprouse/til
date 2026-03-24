@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Readme",
+      "path": "Readme.md"
+    },
+    {
+      "basename": "unblock-downloaded-script",
+      "path": "powershell/unblock-downloaded-script.md"
+    },
+    {
+      "basename": "upgrade-oh-my-posh",
+      "path": "powershell/upgrade-oh-my-posh.md"
+    },
+    {
       "basename": "ccgms",
       "path": "retro/c64/ccgms.md"
     },
@@ -11,10 +23,6 @@
     {
       "basename": "tmux",
       "path": "linux/tmux.md"
-    },
-    {
-      "basename": "Readme",
-      "path": "Readme.md"
     },
     {
       "basename": "uv",

@@ -60,17 +60,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "retro/c64/ccgms.md",
+                "file": "powershell/unblock-downloaded-script.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "ccgms"
+              "title": "unblock-downloaded-script"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -133,8 +132,7 @@
               "title": "Recent Files"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -238,11 +236,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6e8b3109b4505ecc",
+  "active": "5f9b250e6aa41d7f",
   "lastOpenFiles": [
+    "powershell/unblock-downloaded-script.md",
+    "Readme.md",
+    "powershell/upgrade-oh-my-posh.md",
+    "retro/c64/ccgms.md",
     "retro/c64/tokenize-basic.md",
     "linux/tmux.md",
-    "Readme.md",
     "python/uv.md",
     "python/poetry.md",
     "windows/server-manager.md",
@@ -264,9 +265,6 @@
     "hacking/pwn.college/crypto/otp.md",
     "csharp/dotnet_run_app.md",
     "c/make.md",
-    "hacking/pwn.college/network_intercepts/Readme.md",
-    "hacking/pwn.college/webserver/Readme.md",
-    "azure/Untitled.md",
-    "android/move_sdk.md"
+    "hacking/pwn.college/network_intercepts/Readme.md"
   ]
 }

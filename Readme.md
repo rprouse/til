@@ -117,6 +117,7 @@ git config core.eol lf
 
 - [Upgrade Oh My Posh](./powershell/upgrade-oh-my-posh.md)
 - [Zoxide](./linux/zoxide.md) a smarter `cd` command
+- [Unblock a Downloaded PowerShell Script](powershell/unblock-downloaded-script.md)
 ## 🐍 Python
 
 - [Python Cheat Sheet](python.md)
