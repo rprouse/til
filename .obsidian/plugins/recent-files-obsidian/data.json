@@ -9,6 +9,14 @@
       "path": "powershell/unblock-downloaded-script.md"
     },
     {
+      "basename": "server-manager",
+      "path": "windows/server-manager.md"
+    },
+    {
+      "basename": "rclone",
+      "path": "linux/rclone.md"
+    },
+    {
       "basename": "upgrade-oh-my-posh",
       "path": "powershell/upgrade-oh-my-posh.md"
     },
@@ -31,14 +39,6 @@
     {
       "basename": "poetry",
       "path": "python/poetry.md"
-    },
-    {
-      "basename": "server-manager",
-      "path": "windows/server-manager.md"
-    },
-    {
-      "basename": "rclone",
-      "path": "linux/rclone.md"
     },
     {
       "basename": "bios_int",
