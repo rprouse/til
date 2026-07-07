@@ -23,6 +23,21 @@
               "icon": "lucide-file",
               "title": "Readme"
             }
+          },
+          {
+            "id": "276c7a6b1a1af7f2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "powershell/unblock-downloaded-files.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "unblock-downloaded-files"
+            }
           }
         ]
       }
@@ -56,7 +71,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "OLLAMA_",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -193,10 +208,12 @@
   },
   "active": "5f9b250e6aa41d7f",
   "lastOpenFiles": [
+    "powershell/unblock-downloaded-files.md",
+    "Readme.md",
     "powershell/unblock-downloaded-script.md",
+    "ai/ollama_models.md",
     "windows/server-manager.md",
     "linux/rclone.md",
-    "Readme.md",
     "powershell/upgrade-oh-my-posh.md",
     "retro/c64/ccgms.md",
     "retro/c64/tokenize-basic.md",
@@ -218,8 +235,6 @@
     "csharp/coverage.md",
     "csharp/mtp.md",
     "hacking/pwn.college/crypto/otp.md",
-    "csharp/dotnet_run_app.md",
-    "c/make.md",
-    "hacking/pwn.college/network_intercepts/Readme.md"
+    "csharp/dotnet_run_app.md"
   ]
 }

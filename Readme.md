@@ -118,6 +118,7 @@ git config core.eol lf
 - [Upgrade Oh My Posh](./powershell/upgrade-oh-my-posh.md)
 - [Zoxide](./linux/zoxide.md) a smarter `cd` command
 - [Unblock a Downloaded PowerShell Script](powershell/unblock-downloaded-script.md)
+- [Unblock Downloaded PDF and Other Files](./powershell/unblock-downloaded-files.md)
 ## 🐍 Python
 
 - [Python Cheat Sheet](python.md)
@@ -156,6 +157,7 @@ git config core.eol lf
 
 - [Install WinGet](./windows/install-winget.md)
 - Stop [Server Manager](./windows/server-manager.md) from starting on Login to Windows Server
+- [Unblock Downloaded PDF and Other Files](./powershell/unblock-downloaded-files.md)
 ## 🛠️ x86/x64 Assembly
 
 - [x86/x64 Assembly Notes](./hacking/pwn.college/assembly/Readme.md) from [pwn.college](./hacking/pwn.college/Readme.md) course

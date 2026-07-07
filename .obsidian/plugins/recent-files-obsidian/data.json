@@ -5,8 +5,16 @@
       "path": "Readme.md"
     },
     {
+      "basename": "unblock-downloaded-files",
+      "path": "powershell/unblock-downloaded-files.md"
+    },
+    {
       "basename": "unblock-downloaded-script",
       "path": "powershell/unblock-downloaded-script.md"
+    },
+    {
+      "basename": "ollama_models",
+      "path": "ai/ollama_models.md"
     },
     {
       "basename": "server-manager",
