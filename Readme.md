@@ -174,6 +174,6 @@ I shamelessly stole this idea and format from [jbranchaud/til](https://github.co
 
 ## ⚖️ License
 
- © 2024 Rob Prouse. This work is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. See [LICENSE](.\LICENSE) for details.
+ © 2026 Rob Prouse. This work is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. See [LICENSE](.\LICENSE) for details.
 
 ![CC BY-NC-SA](./img/by-nc-sa.png)
