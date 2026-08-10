@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "Readme",
-      "path": "Readme.md"
-    },
-    {
       "basename": "unblock-downloaded-files",
       "path": "powershell/unblock-downloaded-files.md"
+    },
+    {
+      "basename": "Readme",
+      "path": "Readme.md"
     },
     {
       "basename": "unblock-downloaded-script",

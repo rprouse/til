@@ -25,7 +25,7 @@
             }
           },
           {
-            "id": "276c7a6b1a1af7f2",
+            "id": "611481a8d0673c8d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -39,7 +39,8 @@
               "title": "unblock-downloaded-files"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -59,7 +60,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -98,8 +101,8 @@
             "state": {
               "type": "recent-files",
               "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
+              "icon": "lucide-ghost",
+              "title": "recent-files"
             }
           }
         ]
@@ -194,7 +197,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 294.5
+    "width": 294.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -206,10 +210,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5f9b250e6aa41d7f",
+  "active": "611481a8d0673c8d",
   "lastOpenFiles": [
-    "powershell/unblock-downloaded-files.md",
     "Readme.md",
+    "powershell/unblock-downloaded-files.md",
     "powershell/unblock-downloaded-script.md",
     "ai/ollama_models.md",
     "windows/server-manager.md",
