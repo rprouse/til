@@ -128,6 +128,7 @@ git config core.eol lf
 - [pipx](./python/pipx.md) runs Python applications in isolated environments.
 - [Poetry](./python/poetry.md) packaging and dependency management.
 - [uv](./python/uv.md) Python package and project manager, written in Rust.
+- VS Code [Jupyter Notebook Keybindings](./python/jupyter-keybindings)
 ## 🕹️ Retro Computers
 ### Commodore 64
 
