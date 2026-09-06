@@ -118,6 +118,7 @@ git config core.eol lf
 - [Upgrade Oh My Posh](./powershell/upgrade-oh-my-posh.md)
 - [Zoxide](./linux/zoxide.md) a smarter `cd` command
 - [Unblock a Downloaded PowerShell Script](powershell/unblock-downloaded-script.md)
+- [Unblock Downloaded PDF and Other Files](./powershell/unblock-downloaded-files.md)
 ## 🐍 Python
 
 - [Python Cheat Sheet](python.md)
@@ -127,6 +128,7 @@ git config core.eol lf
 - [pipx](./python/pipx.md) runs Python applications in isolated environments.
 - [Poetry](./python/poetry.md) packaging and dependency management.
 - [uv](./python/uv.md) Python package and project manager, written in Rust.
+- VS Code [Jupyter Notebook Keybindings](./python/jupyter-keybindings)
 ## 🕹️ Retro Computers
 ### Commodore 64
 
@@ -157,7 +159,7 @@ git config core.eol lf
 - [Install WinGet](./windows/install-winget.md)
 - Stop [Server Manager](./windows/server-manager.md) from starting on Login to Windows Server
 - [SSH into Windows](./windows/windows-ssh.md)
-
+- [Unblock Downloaded PDF and Other Files](./powershell/unblock-downloaded-files.md)
 ## 🛠️ x86/x64 Assembly
 
 - [x86/x64 Assembly Notes](./hacking/pwn.college/assembly/Readme.md) from [pwn.college](./hacking/pwn.college/Readme.md) course
@@ -174,6 +176,6 @@ I shamelessly stole this idea and format from [jbranchaud/til](https://github.co
 
 ## ⚖️ License
 
- © 2024 Rob Prouse. This work is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. See [LICENSE](.\LICENSE) for details.
+ © 2026 Rob Prouse. This work is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. See [LICENSE](.\LICENSE) for details.
 
 ![CC BY-NC-SA](./img/by-nc-sa.png)
