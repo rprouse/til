@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "jupyter-keybindings",
-      "path": "python/jupyter-keybindings.md"
-    },
-    {
       "basename": "Readme",
       "path": "Readme.md"
     },
     {
+      "basename": "ssh_auth_failures",
+      "path": "linux/ssh_auth_failures.md"
+    },
+    {
       "basename": "unblock-downloaded-files",
       "path": "powershell/unblock-downloaded-files.md"
+    },
+    {
+      "basename": "jupyter-keybindings",
+      "path": "python/jupyter-keybindings.md"
     },
     {
       "basename": "unblock-downloaded-script",

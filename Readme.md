@@ -110,6 +110,7 @@ git config core.eol lf
 - [timesyncd](./linux/timesyncd.md) a lightweight `ntpd` time sync deamon
 - [Mount Google Drive on Linux using Rclone](./linux/rclone.md)
 - [tmux](./linux/tmux.md)
+- [SSH](./linux/ssh_auth_failures.md) Too many authentication failures
 ## 📄 NeoVim
 
 - [Install NeoVim](./neovim/install-neovim.md)
