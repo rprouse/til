@@ -159,6 +159,7 @@ git config core.eol lf
 
 - [Install WinGet](./windows/install-winget.md)
 - Stop [Server Manager](./windows/server-manager.md) from starting on Login to Windows Server
+- [SSH into Windows](./windows/windows-ssh.md)
 - [Unblock Downloaded PDF and Other Files](./powershell/unblock-downloaded-files.md)
 ## 🛠️ x86/x64 Assembly
 
