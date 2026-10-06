@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "symlinks",
+      "path": "windows/symlinks.md"
+    },
+    {
       "basename": "Readme",
       "path": "Readme.md"
+    },
+    {
+      "basename": "windows-ssh",
+      "path": "windows/windows-ssh.md"
     },
     {
       "basename": "ssh_auth_failures",

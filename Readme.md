@@ -161,6 +161,7 @@ git config core.eol lf
 - Stop [Server Manager](./windows/server-manager.md) from starting on Login to Windows Server
 - [SSH into Windows](./windows/windows-ssh.md)
 - [Unblock Downloaded PDF and Other Files](./powershell/unblock-downloaded-files.md)
+- [Create Symlinks in Windows](./windows/symlinks.md)
 ## 🛠️ x86/x64 Assembly
 
 - [x86/x64 Assembly Notes](./hacking/pwn.college/assembly/Readme.md) from [pwn.college](./hacking/pwn.college/Readme.md) course
