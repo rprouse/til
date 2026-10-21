@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "symlinks",
-      "path": "windows/symlinks.md"
-    },
-    {
       "basename": "Readme",
       "path": "Readme.md"
+    },
+    {
+      "basename": "unblock-downloaded-files",
+      "path": "powershell/unblock-downloaded-files.md"
+    },
+    {
+      "basename": "symlinks",
+      "path": "windows/symlinks.md"
     },
     {
       "basename": "windows-ssh",
@@ -15,10 +19,6 @@
     {
       "basename": "ssh_auth_failures",
       "path": "linux/ssh_auth_failures.md"
-    },
-    {
-      "basename": "unblock-downloaded-files",
-      "path": "powershell/unblock-downloaded-files.md"
     },
     {
       "basename": "jupyter-keybindings",
