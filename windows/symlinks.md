@@ -1,4 +1,4 @@
-# B
+# Create Symlinks in Windows
 
 You need elevation **or** Developer Mode enabled (Settings → System → For developers), which lets non-admin users create symlinks.
 
