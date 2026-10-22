@@ -5,6 +5,18 @@
       "path": "Readme.md"
     },
     {
+      "basename": "backup-bitlocker-key",
+      "path": "windows/backup-bitlocker-key.md"
+    },
+    {
+      "basename": "export-import-winget",
+      "path": "windows/export-import-winget.md"
+    },
+    {
+      "basename": "trust-dev-drive",
+      "path": "windows/trust-dev-drive.md"
+    },
+    {
       "basename": "unblock-downloaded-files",
       "path": "powershell/unblock-downloaded-files.md"
     },

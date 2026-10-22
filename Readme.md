@@ -162,6 +162,9 @@ git config core.eol lf
 - [SSH into Windows](./windows/windows-ssh.md)
 - [Unblock Downloaded PDF and Other Files](./powershell/unblock-downloaded-files.md)
 - [Create Symlinks in Windows](./windows/symlinks.md)
+- [Enable Trust on a Dev Drive](./windows/trust-dev-drive.md)
+- [Export then Import WinGet Packages](./windows/trust-dev-drive.md)
+- [Backup Bitlocker Key for a Drive](./windows/backup-bitlocker-key.md)
 ## 🛠️ x86/x64 Assembly
 
 - [x86/x64 Assembly Notes](./hacking/pwn.college/assembly/Readme.md) from [pwn.college](./hacking/pwn.college/Readme.md) course
